@@ -1,0 +1,8 @@
+.signOut {
+  display: flex !important;
+  align-items: center;
+}
+
+.signOut:hover path {
+  fill: #ffffffb3;
+}

@@ -1,0 +1,7 @@
+.plus {
+  margin-right: 16px;
+}
+
+.plus:hover span {
+  color: #ffffffb3;
+}

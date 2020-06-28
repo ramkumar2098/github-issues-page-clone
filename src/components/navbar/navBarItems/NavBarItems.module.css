@@ -1,0 +1,21 @@
+.navBarItems {
+  background-color: #24292e;
+  padding: 0 1.2rem 1rem 1.2rem;
+}
+
+.navBarItems > a {
+  display: block;
+  background-color: #24292e;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 0;
+  border-top: 1px solid #ffffff26;
+}
+
+.navBarItems > a:hover {
+  color: #ffffffb3;
+}
+
+.navBarItems > a:nth-child(6) {
+  display: flex;
+}

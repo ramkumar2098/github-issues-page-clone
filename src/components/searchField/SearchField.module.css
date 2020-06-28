@@ -1,0 +1,23 @@
+.searchField {
+  justify-content: center;
+  background: #24292e;
+  padding: 0 1.2rem;
+}
+
+.input {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  border-style: none;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.focus {
+  background-color: #fff;
+  color: #24292e;
+}
+
+.blur {
+  background-color: #ffffff20;
+  color: #fff;
+}

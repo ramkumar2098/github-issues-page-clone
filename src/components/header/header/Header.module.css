@@ -1,0 +1,18 @@
+.header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #24292e;
+  padding: 16px;
+}
+
+.header button:hover path,
+.header a:hover path {
+  fill: #ffffffb3;
+}
+
+@media (min-width: 1010px) {
+  .header {
+    /* display: block; */
+  }
+}
