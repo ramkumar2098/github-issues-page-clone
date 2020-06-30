@@ -1,0 +1,42 @@
+.repoTitle {
+  display: flex;
+  align-items: center;
+}
+
+.title,
+.subTitle,
+.slash {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.title,
+.subTitle {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.title {
+  margin-left: 8px;
+}
+
+.subTitle {
+  font-weight: 600;
+}
+
+.slash {
+  margin: 0 0.25em;
+}
+
+.title:hover,
+.subTitle:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 770px) {
+  .title,
+  .subTitle,
+  .slash {
+    font-size: 20px;
+  }
+}

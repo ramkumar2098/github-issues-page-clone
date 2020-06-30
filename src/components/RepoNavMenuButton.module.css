@@ -1,0 +1,9 @@
+.menuButton {
+  padding: 8px 16px;
+}
+
+@media (min-width: 980px) {
+  .menuButton {
+    visibility: hidden;
+  }
+}

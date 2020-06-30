@@ -1,5 +1,6 @@
 .burgerNav {
   background: #24292e;
+  padding: 0;
   border-style: none;
   cursor: pointer;
 }

@@ -1,4 +1,4 @@
-export const navBarItemsList = [
+export const navItemsList = [
   'Pull requests',
   'Issues',
   'Marketplace',

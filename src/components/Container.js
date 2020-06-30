@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './header/header/Header';
 import NavBar from './navbar/NavBar';
+import RepoHead from './RepoHead';
 
 export const DisplayNavBarContext = React.createContext();
 export const SearchQueryContext = React.createContext();
@@ -14,7 +15,7 @@ function Container() {
   mediaQ.onchange = () => setDesktopView(mediaQ.matches);
 
   return (
-    <div>
+    <>
       <SearchQueryContext.Provider value={{ searchQuery, setSearchQuery }}>
         <DisplayNavBarContext.Provider
           value={{ displayNavBar, setDisplayNavBar }}
@@ -23,7 +24,11 @@ function Container() {
         </DisplayNavBarContext.Provider>
         {!desktopView && displayNavBar && <NavBar />}
       </SearchQueryContext.Provider>
-    </div>
+      <RepoHead />
+      <div>
+        {/* adasfsdfsdadasfsdfsdadasfsdfsdadasfsdfsdadasfsdfsdadasfsdfsdadasfsdfsdadasfsdfsdadasfsdfsdadasfsdfsdadasfsdfsd */}
+      </div>
+    </>
   );
 }
 

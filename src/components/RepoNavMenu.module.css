@@ -1,0 +1,56 @@
+.repoNavMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 16px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px #959da533;
+  width: 160px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 2px;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+.repoNavMenu::before,
+.repoNavMenu::after {
+  position: absolute;
+  left: auto;
+  display: inline-block;
+  content: '';
+}
+
+.repoNavMenu::before {
+  top: -16px;
+  right: 9px;
+  border: 8px solid transparent;
+  border-bottom-color: #1b1f2326;
+}
+
+.repoNavMenu::after {
+  top: -14px;
+  right: 10px;
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+}
+
+.repoNavMenu > li > a {
+  color: #24292e;
+  padding: 4px 8px 4px 16px;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.repoNavMenu > li > a:hover {
+  background-color: #0366d6;
+  color: #fff;
+}
+
+@media (min-width: 770px) {
+  .repoNavMenu {
+    right: 24px;
+  }
+}

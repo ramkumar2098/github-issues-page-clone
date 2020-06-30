@@ -1,5 +1,5 @@
 import React from 'react';
-import BurgerNav from '../burgerNav/BurgerNav';
+import BurgerNav from './burgerNav/BurgerNav';
 import GithubLogo from '../GithubLogo';
 import NotificationBell from './NotificationBell';
 

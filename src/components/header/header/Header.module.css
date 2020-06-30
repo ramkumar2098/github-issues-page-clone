@@ -10,9 +10,3 @@
 .header a:hover path {
   fill: #ffffffb3;
 }
-
-@media (min-width: 1010px) {
-  .header {
-    /* display: block; */
-  }
-}
