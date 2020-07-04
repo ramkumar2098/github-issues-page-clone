@@ -1,0 +1,42 @@
+.repoAction {
+  width: 125px;
+  border: 1px solid #d9dadc;
+  border-radius: 6px;
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.action {
+  padding: 3px 12px;
+  border-right: 1px solid #d9dadc !important;
+  border-style: none;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #fafbfc;
+  cursor: pointer;
+  display: flex;
+}
+
+.action:hover {
+  background-color: #f3f4f6;
+}
+
+.textContent {
+  margin-left: 3px;
+  color: #24292e;
+}
+
+.link {
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #24292e;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #0366d6;
+}

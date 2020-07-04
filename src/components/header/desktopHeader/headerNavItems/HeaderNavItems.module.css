@@ -1,0 +1,10 @@
+.navBarItems > a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+.navBarItems > a:hover {
+  color: #ffffffb3;
+}

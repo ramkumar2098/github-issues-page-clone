@@ -1,0 +1,31 @@
+.modalHeader {
+  font-weight: 600;
+  border-bottom: 1px solid #eaecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader > span,
+.close {
+  padding: 16px;
+}
+
+.close {
+  background: #fff;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.close:focus path,
+.close:hover path {
+  fill: #24292e;
+}
+
+@media (min-width: 540px) {
+  .modalHeader > span,
+  .close {
+    padding: 7px 7px 7px 16px;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-import NavItems from '../../NavItems';
-import UserName from '../UserName';
-import SignOut from '../signOut/SignOut';
+import NavItems from './navItems/NavItems';
+import UserName from './userName/UserName';
+import SignOut from './signOut/SignOut';
 import style from './NavBarItems.module.css';
 
 function NavBarItems() {

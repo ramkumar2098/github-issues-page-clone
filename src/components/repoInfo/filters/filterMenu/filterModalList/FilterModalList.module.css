@@ -1,0 +1,46 @@
+.modalList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modalList:last-child:hover {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.modalList > li > a {
+  border-bottom: 1px solid #eaecef;
+  text-decoration: none;
+  display: inline-block;
+  color: #24292e;
+  width: 100%;
+  padding: 16px;
+}
+
+.modalList > li > a:focus {
+  outline: 0;
+  background-color: #f6f8fa;
+}
+
+.modalList > li > a:hover {
+  background-color: #f6f8fa;
+}
+
+.modalList :last-child > a {
+  font-weight: 600;
+  border-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.modalList :last-child > a > span {
+  margin-left: 8px;
+}
+
+@media (min-width: 540px) {
+  .modalList > li > a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}

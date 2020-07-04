@@ -1,0 +1,27 @@
+.filterBtn {
+  cursor: pointer;
+  background-color: #fafbfc;
+  color: #444d56;
+  padding: 5px 16px;
+  border: 1px solid rgba(27, 31, 35, 0.149);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  font-weight: 600;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filterBtn:hover {
+  background-color: #f3f4f6;
+}
+
+.filterBtn:focus {
+  outline: 0;
+  z-index: 1;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+
+.filterBtn > :first-child {
+  margin-right: 3px;
+}

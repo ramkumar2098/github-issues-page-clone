@@ -1,0 +1,24 @@
+.searchIcon {
+  position: absolute;
+  top: 8px;
+  left: 96px;
+  cursor: text;
+}
+
+.input {
+  background-color: #fafbfc;
+  color: #586069;
+  padding: 5px 12px;
+  border: 1px solid rgb(225, 228, 232);
+  border-left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-indent: 20px;
+  line-height: 20px;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: #6a737d;
+  opacity: 0.54;
+}

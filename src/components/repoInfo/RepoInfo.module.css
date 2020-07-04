@@ -1,0 +1,32 @@
+.repoInfo {
+  padding: 0 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.repoInfo > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 770px) {
+  .repoInfo {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .repoInfo > div {
+    justify-content: flex-end;
+  }
+
+  .repoInfo > :first-child {
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 1010px) {
+  .repoInfo {
+    padding: 0 32px;
+  }
+}

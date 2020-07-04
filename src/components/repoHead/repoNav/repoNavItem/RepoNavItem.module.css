@@ -1,0 +1,40 @@
+.repoNavItem {
+  display: flex;
+}
+
+.navLink {
+  color: #1b1f23;
+  text-decoration: none;
+  padding: 8px 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #d1d5da00;
+  transition: border-bottom-color 0.36s ease-in;
+}
+
+.navLink:hover {
+  border-bottom: 2px solid #d1d5da;
+  transition: border-bottom-color 0.12s ease-out;
+}
+
+.issues {
+  text-decoration: none;
+  color: #24292e;
+  line-height: 30px;
+  border-bottom: 1.5px solid #f9826c;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.count {
+  background-color: #d1d5da80;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  margin-left: 4px;
+  line-height: 20px;
+}
