@@ -1,0 +1,30 @@
+.selectMenuFilter {
+  padding: 16px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.selectMenuInput {
+  width: 100%;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292e;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(225, 228, 232, 0.2);
+}
+
+.selectMenuInput:focus {
+  border-color: #0366d6;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+
+@media (min-width: 540px) {
+  .selectMenuFilter {
+    padding: 8px;
+  }
+}

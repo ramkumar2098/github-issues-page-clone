@@ -1,0 +1,47 @@
+.selectMenuItem {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  padding-left: 40px;
+  overflow: hidden;
+  color: #24292e;
+  text-align: left;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0;
+  border-bottom: 1px solid #eaecef;
+}
+
+.selectMenuItem:hover,
+.selectMenuItem:focus {
+  background-color: #f6f8fa;
+}
+
+.selectMenuItem:focus {
+  outline: none;
+}
+
+.selectMenuItem > img {
+  margin-right: 8px !important;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.selectMenuItem > strong {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.selectMenuItem > span {
+  color: #6a737d;
+  white-space: nowrap;
+}
+
+@media (min-width: 540px) {
+  .selectMenuItem {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}

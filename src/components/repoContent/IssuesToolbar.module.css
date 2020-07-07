@@ -1,0 +1,20 @@
+.issuesToolbar {
+  background-color: #f6f8fa;
+  padding: 16px;
+  border-top: 1px solid #e1e4e8;
+  border-bottom: 1px solid #e1e4e8;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 540px) {
+  .toolbarItem > span:nth-child(2) {
+    display: inline-block;
+  }
+
+  .issuesToolbar {
+    justify-content: flex-start;
+    border: 1px solid #e1e4e8;
+  }
+}

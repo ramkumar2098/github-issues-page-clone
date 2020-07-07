@@ -1,0 +1,36 @@
+.selectMenuHeader {
+  border-bottom: 1px solid #eaecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectMenuTitle,
+.selectMenuCloseButton {
+  padding: 16px;
+}
+
+.selectMenuTitle {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.selectMenuCloseButton {
+  color: #959da5;
+  background-color: initial;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectMenuCloseButton:hover path,
+.selectMenuCloseButton:focus path {
+  fill: #24292e;
+}
+
+@media (min-width: 540px) {
+  .selectMenuTitle,
+  .selectMenuCloseButton {
+    padding: 7px 7px 7px 16px;
+  }
+}

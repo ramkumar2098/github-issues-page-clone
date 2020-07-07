@@ -1,0 +1,31 @@
+.issuesState {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.issuesOpen {
+  color: #24292e;
+  font-weight: 600;
+}
+
+.issuesClosed {
+  color: #586069;
+  margin-left: 12px;
+}
+
+.issuesClosed:hover {
+  color: #24292e;
+}
+
+.issuesClosed path {
+  fill: #586069;
+}
+
+.issuesClosed:hover path {
+  fill: #24292e;
+}
+
+.issuesState > span {
+  margin-left: 8px;
+}

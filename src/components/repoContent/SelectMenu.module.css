@@ -1,0 +1,42 @@
+.selectMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  background-color: rgba(27, 31, 35, 0.5);
+  cursor: default;
+}
+
+.selectMenuModal {
+  background-color: #fff;
+  height: 80%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(27, 31, 35, 0.4);
+}
+
+@media (min-width: 540px) {
+  .selectMenu {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .selectMenuModal {
+    font-size: 12px;
+    width: 300px;
+    max-height: 480px;
+    margin: 8px 0 16px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  }
+}

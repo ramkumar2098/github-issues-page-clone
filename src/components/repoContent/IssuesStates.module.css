@@ -1,0 +1,10 @@
+.issuesStates {
+  padding-left: 16px;
+  display: flex;
+}
+
+@media (min-width: 540px) {
+  .issuesStates {
+    padding: 0;
+  }
+}
