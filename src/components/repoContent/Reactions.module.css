@@ -1,0 +1,36 @@
+.reactionsHeader {
+  font-size: 12px;
+  color: #6a737d;
+  background-color: #f6f8fa;
+  padding: 4px 16px;
+  border-bottom: 1px solid #eaecef;
+  white-space: nowrap;
+}
+
+.reactions {
+  padding: 16px;
+}
+
+.reactions > a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  opacity: 0.7;
+}
+
+.reactions > a:hover,
+.reactions > a:focus {
+  background-color: #0366d6;
+  opacity: 1;
+}
+
+.reactions img {
+  width: 1em;
+}
+
+@media (min-width: 540px) {
+  .reactions {
+    padding: 8px;
+  }
+}

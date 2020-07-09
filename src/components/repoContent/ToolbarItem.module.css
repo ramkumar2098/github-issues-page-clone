@@ -1,7 +1,8 @@
 .toolbarItem {
   text-decoration: none;
   color: #586069;
-  padding: 0 16px;
+  position: relative;
+  display: block;
 }
 
 .toolbarItem:hover {

@@ -1,0 +1,30 @@
+.lastMenuItem {
+  display: block;
+  text-decoration: none;
+  padding: 16px;
+}
+
+.lastMenuItem:focus {
+  outline: none;
+  background-color: #f6f8fa;
+}
+
+.lastMenuItem > div:nth-child(1) {
+  font-weight: 600;
+  color: #24292e;
+}
+
+.lastMenuItem > div:nth-child(2) {
+  color: #6a737d;
+}
+
+@media (min-width: 540px) {
+  .lastMenuItem {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .lastMenuItem > div:nth-child(1) {
+    font-size: 14px;
+  }
+}

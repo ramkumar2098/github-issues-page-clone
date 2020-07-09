@@ -3,6 +3,7 @@ import Header from './header/Header';
 import NavBar from './navbar/NavBar';
 import RepoHead from './repoHead/RepoHead';
 import RepoInfo from './repoInfo/RepoInfo';
+import RepoContent from './repoContent/RepoContent';
 
 export const DisplayNavBarContext = React.createContext();
 export const SearchQueryContext = React.createContext();
@@ -27,6 +28,7 @@ function Container() {
       </SearchQueryContext.Provider>
       <RepoHead />
       <RepoInfo />
+      <RepoContent />
     </>
   );
 }

@@ -12,6 +12,7 @@
 @media (min-width: 770px) {
   .repoInfo {
     padding: 0 24px;
+    margin-bottom: 16px;
     display: flex;
     flex-direction: row-reverse;
   }

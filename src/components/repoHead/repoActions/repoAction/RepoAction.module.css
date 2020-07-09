@@ -18,6 +18,7 @@
   background-color: #fafbfc;
   cursor: pointer;
   display: flex;
+  align-items: center;
 }
 
 .action:hover {

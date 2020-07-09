@@ -8,6 +8,11 @@
   justify-content: space-between;
 }
 
+.issuesToolbar > :nth-child(3),
+.issuesToolbar > :nth-child(4) {
+  display: none;
+}
+
 @media (min-width: 540px) {
   .toolbarItem > span:nth-child(2) {
     display: inline-block;
@@ -16,5 +21,28 @@
   .issuesToolbar {
     justify-content: flex-start;
     border: 1px solid #e1e4e8;
+  }
+
+  .issuesToolbar > :last-child {
+    padding-right: 0 !important;
+  }
+
+  .issuesToolbar > :last-child > a > div {
+    right: 0;
+  }
+}
+
+@media (min-width: 770px) {
+  .issuesToolbar > :nth-child(3),
+  .issuesToolbar > :nth-child(4) {
+    display: block;
+  }
+}
+
+@media (min-width: 1010px) {
+  .issuesToolbar {
+    padding: 0;
+    border: 0;
+    margin: 0;
   }
 }

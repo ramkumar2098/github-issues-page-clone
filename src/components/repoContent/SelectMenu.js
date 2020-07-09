@@ -9,10 +9,10 @@ function SelectMenu(props) {
 
   return (
     <div className={style.selectMenu}>
-      <div className={style.selectMenuModal + ' selectMenuModal'}>
+      <div className={style.selectMenuModal + ' ' + props.className}>
         <SelectMenuHeader {...props} />
         <SelectMenuFilter {...props} value={value} setValue={setValue} />
-        <SelectMenuList value={value} />
+        <SelectMenuList {...props} value={value} />
       </div>
     </div>
   );

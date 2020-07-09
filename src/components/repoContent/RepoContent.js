@@ -6,10 +6,9 @@ import style from './RepoContent.module.css';
 function RepoContent() {
   return (
     <div className={style.repoContent}>
-      <IssuesStates />
-      <IssuesToolbar />
       <div>
-        asdadasadsasdasddasdadasadsasdasddasdadasadsasdasddasdadasadsasdasdd
+        <IssuesStates />
+        <IssuesToolbar />
       </div>
     </div>
   );

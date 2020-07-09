@@ -10,7 +10,7 @@ function Issues({ displayIcon }) {
         <span
           style={(() =>
             displayIcon
-              ? { marginLeft: '6px', fontWeight: 600 }
+              ? { marginLeft: '8px', fontWeight: 600 }
               : { fontWeight: 600 })()}
         >
           Issues

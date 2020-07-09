@@ -7,7 +7,7 @@ function PullRequests({ displayIcon }) {
     <div className={style.repoNavItem}>
       <a href="#" className={style.navLink}>
         {displayIcon && <PullRequestsSVG />}
-        <span style={(() => (displayIcon ? { marginLeft: '6px' } : null))()}>
+        <span style={(() => (displayIcon ? { marginLeft: '8px' } : null))()}>
           Pull requests
         </span>
         <span className={style.count}>132</span>

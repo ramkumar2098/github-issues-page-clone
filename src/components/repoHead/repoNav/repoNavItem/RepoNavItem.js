@@ -8,7 +8,7 @@ function RepoNavItem({ repoNavItem, displayIcon }) {
     <div className={style.repoNavItem}>
       <a href="#" className={style.navLink}>
         {displayIcon && <Icon />}
-        <span style={(() => (displayIcon ? { marginLeft: '6px' } : null))()}>
+        <span style={(() => (displayIcon ? { marginLeft: '8px' } : null))()}>
           {textContent}
         </span>
       </a>
