@@ -1,8 +1,8 @@
 import React from 'react';
-import SortMenuItem from './SortMenuItem';
-import { sortMenuItems } from '../../data/sortMenuItems';
+import SortMenuItem from './sortMenuItem/SortMenuItem';
+import { sortMenuItems } from '../../../../../../data/sortMenuItems';
 import { v4 as uuidv4 } from 'uuid';
-import Reactions from './Reactions';
+import Reactions from './reactions/Reactions';
 
 function SortMenuList() {
   return (

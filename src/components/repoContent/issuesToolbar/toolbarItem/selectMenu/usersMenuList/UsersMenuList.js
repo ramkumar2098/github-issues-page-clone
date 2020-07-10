@@ -1,11 +1,11 @@
 import React from 'react';
-import SelectMenuItem from './SelectMenuItem';
-import { selectMenuItems } from '../../data/selectMenuItems';
+import Assigned from './assigned/Assigned';
+import UsersMenuItem from './usersMenuItem/UsersMenuItem';
+import { userMenuItems } from '../../../../../../data/userMenuItems';
 import { v4 as uuidv4 } from 'uuid';
-import Assigned from './Assigned';
-import LastMenuItem from './LastMenuItem';
+import LastMenuItem from './lastMenuItem/LastMenuItem';
 
-function SelectMenuList(props) {
+function UsersMenuList(props) {
   const { value } = props;
   const isValid = string =>
     string.toLowerCase().includes(value.trim().toLowerCase());
@@ -13,14 +13,14 @@ function SelectMenuList(props) {
   return (
     <div style={{ overflow: 'auto' }}>
       <Assigned {...props} />
-      {selectMenuItems
+      {userMenuItems
         .filter(({ userID, userName }) => isValid(userID) || isValid(userName))
-        .map(selectMenuItem => (
-          <SelectMenuItem key={uuidv4()} selectMenuItem={selectMenuItem} />
+        .map(usersMenuItem => (
+          <UsersMenuItem key={uuidv4()} usersMenuItem={usersMenuItem} />
         ))}
       {value && <LastMenuItem {...props} />}
     </div>
   );
 }
 
-export default SelectMenuList;
+export default UsersMenuList;

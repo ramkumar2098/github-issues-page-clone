@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import DropdownCaret from '../dropdownCaret/DropdownCaret';
+import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
+import SelectMenu from './selectMenu/SelectMenu';
 import style from './ToolbarItem.module.css';
 
-function ToolbarItem(props) {
-  const { textContent, classNames, SelectMenu } = props;
+function ToolbarItem({ toolbarItem: props }) {
+  const { textContent, classNames } = props;
   const [toolbarItem, selectMenuModal] = classNames;
 
   const classList = [
@@ -17,19 +18,13 @@ function ToolbarItem(props) {
   const closeMenu = () => setDisplayMenu(false);
 
   useEffect(() => {
-    const theEvent = e =>
-      (!e.target.matches(classList.map(className => `.${className}`)) ||
-        e.keyCode === 27) &&
-      closeMenu();
-
     ['click', 'keyup'].forEach(event => {
-      window.addEventListener(event, theEvent);
-    });
-
-    return () =>
-      ['click', 'keyup'].forEach(event => {
-        window.removeEventListener(event, theEvent);
+      window.addEventListener(event, e => {
+        (!e.target.matches(classList.map(className => `.${className}`)) ||
+          e.keyCode === 27) &&
+          closeMenu();
       });
+    });
   }, []);
 
   return (
@@ -48,9 +43,9 @@ function ToolbarItem(props) {
         </span>
         {displayMenu && (
           <SelectMenu
+            {...props}
             className={selectMenuModal}
             closeMenu={closeMenu}
-            {...props}
           />
         )}
       </a>

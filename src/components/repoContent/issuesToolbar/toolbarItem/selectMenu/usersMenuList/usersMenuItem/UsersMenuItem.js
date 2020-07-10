@@ -1,8 +1,8 @@
 import React from 'react';
-import style from './SelectMenuItem.module.css';
+import style from '../../selectMenuItem/SelectMenuItem.module.css';
 
-function SelectMenuItem({ selectMenuItem }) {
-  const { avatar, userID, userName } = selectMenuItem;
+function UsersMenuItem({ usersMenuItem }) {
+  const { avatar, userID, userName } = usersMenuItem;
 
   return (
     <a href="#" className={style.selectMenuItem}>
@@ -13,4 +13,4 @@ function SelectMenuItem({ selectMenuItem }) {
   );
 }
 
-export default SelectMenuItem;
+export default UsersMenuItem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { selectMenuItem } from './SelectMenuItem.module.css';
+import { selectMenuItem } from '../../selectMenuItem/SelectMenuItem.module.css';
 import style from './LabelMenuItem.module.css';
 
 function LabelMenuItem({ labelMenuItem }) {

@@ -1,6 +1,6 @@
 import React from 'react';
-import IssuesStates from './IssuesStates';
-import IssuesToolbar from './IssuesToolbar';
+import IssuesStates from './issuesStates/IssuesStates';
+import IssuesToolbar from './issuesToolbar/IssuesToolbar';
 import style from './RepoContent.module.css';
 
 function RepoContent() {

@@ -1,9 +1,9 @@
 import React from 'react';
-import { selectMenuItem } from './SelectMenuItem.module.css';
-
-const assigned = 'Assigned to nobody';
+import { selectMenuItem } from '../../selectMenuItem/SelectMenuItem.module.css';
 
 function Assigned({ textContent, value }) {
+  const assigned = 'Assigned to nobody';
+
   return (
     textContent === 'Assignee' &&
     (!value || assigned.toLowerCase().includes(value.trim().toLowerCase())) && (

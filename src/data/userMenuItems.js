@@ -19,7 +19,7 @@ import avatar18 from '../images/2646229.png';
 import avatar19 from '../images/4465755.jpeg';
 import avatar20 from '../images/3336280.png';
 
-export const selectMenuItems = [
+export const userMenuItems = [
   {
     avatar,
     userID: 'ramkumar2098',

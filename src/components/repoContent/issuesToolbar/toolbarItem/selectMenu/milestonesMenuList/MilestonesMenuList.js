@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import MilestonesMenuItem from './MilestonesMenuItem';
-import { milestonesMenuItems } from '../../data/milestonesMenuItems';
+import MilestonesMenuItem from './milestonesMenuItem/MilestonesMenuItem';
+import { milestonesMenuItems } from '../../../../../../data/milestonesMenuItems';
 import { v4 as uuidv4 } from 'uuid';
-import NotFound from './NotFound';
+import NotFound from '../notFound/NotFound';
 
 function MilestonesMenuList({ value }) {
   const [notFound, setNotFound] = useState(false);
