@@ -1,5 +1,5 @@
 import React from 'react';
-import CloseSVG from '../../../../../../SVGs/CloseSVG';
+import CloseSVG from 'SVGs/CloseSVG';
 import style from './SelectMenuHeader.module.css';
 
 function SelectMenuHeader({ header, closeMenu }) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import RepoNavMenuItem from './repoNavMenuItem/RepoNavMenuItem';
-import { repoNavMenuItems } from '../../../data/repoNavMenuItems';
+import { repoNavMenuItems } from 'data/repoNavMenuItems';
 import { v4 as uuid } from 'uuid';
 import style from './RepoNavMenu.module.css';
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import CodeSVG from '../../../SVGs/CodeSVG';
+import CodeSVG from 'SVGs/CodeSVG';
 import Issues from './issues/Issues';
 import PullRequests from './pullRequests/PullRequests';
 import RepoNavItem from './repoNavItem/RepoNavItem';
-import { repoNavItems } from '../../../data/repoNavItems';
+import { repoNavItems } from 'data/repoNavItems';
 import { v4 as uuidv4 } from 'uuid';
 import style from './RepoNav.module.css';
 

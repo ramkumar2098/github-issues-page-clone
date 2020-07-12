@@ -1,5 +1,5 @@
 import React from 'react';
-import { emojis } from '../../../../../../../data/emojis';
+import { emojis } from 'data/emojis';
 import { v4 as uuidv4 } from 'uuid';
 import style from './Reactions.module.css';
 

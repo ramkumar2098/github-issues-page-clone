@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
+import ToolbarItemName from './toolbarItemName/ToolbarItemName';
 import SelectMenu from './selectMenu/SelectMenu';
 import style from './ToolbarItem.module.css';
 
 function ToolbarItem({ toolbarItem: props }) {
-  const { textContent, classNames } = props;
+  const { classNames } = props;
   const [toolbarItem, selectMenuModal] = classNames;
 
   const classList = [
@@ -37,10 +37,7 @@ function ToolbarItem({ toolbarItem: props }) {
         }
         className={`${style.toolbarItem} ${toolbarItem}`}
       >
-        <span className={style.textContent}>
-          <span>{textContent}</span>
-          <DropdownCaret />
-        </span>
+        <ToolbarItemName {...props} />
         {displayMenu && (
           <SelectMenu
             {...props}

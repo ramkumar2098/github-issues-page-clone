@@ -1,5 +1,5 @@
 import React from 'react';
-import SignOutSVG from '../../../../SVGs/SignOutSVG';
+import SignOutSVG from 'SVGs/SignOutSVG';
 import style from './SignOut.module.css';
 
 function SignOut() {

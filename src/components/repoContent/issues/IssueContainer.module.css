@@ -1,0 +1,73 @@
+.issueContainer {
+  line-height: 1.25;
+  padding: 8px;
+  padding-right: 16px;
+  flex: auto;
+}
+
+.issue {
+  text-decoration: none;
+  color: #24292e;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.issueLabels {
+  display: block;
+  line-height: 1.5;
+}
+
+.issueLabel {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #d4c5f9;
+  color: #000000;
+  font-size: 12px;
+  padding: 0 7px;
+  border: 1px solid transparent;
+  border-radius: 2em;
+}
+
+.issueOpened {
+  color: #586069;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.issueOpened > a {
+  text-decoration: none;
+  color: #586069;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: 770px) {
+  .issueContainer {
+    padding-right: 8px;
+  }
+  .issue:hover {
+    color: #0366d6;
+  }
+
+  .issueLabels {
+    display: inline;
+  }
+
+  .issueLabel {
+    margin-left: 4px;
+  }
+
+  .issueOpened > a:hover {
+    color: #0366d6;
+  }
+
+  .overlay {
+    display: none;
+  }
+}

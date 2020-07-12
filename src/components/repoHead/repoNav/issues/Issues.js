@@ -1,5 +1,5 @@
 import React from 'react';
-import IssuesSVG from '../../../../SVGs/IssuesSVG';
+import IssuesSVG from 'SVGs/IssuesSVG';
 import style from '../repoNavItem/RepoNavItem.module.css';
 
 function Issues({ displayIcon }) {

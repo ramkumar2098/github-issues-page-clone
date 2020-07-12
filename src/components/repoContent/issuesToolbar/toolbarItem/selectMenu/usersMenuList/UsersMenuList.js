@@ -1,7 +1,7 @@
 import React from 'react';
 import Assigned from './assigned/Assigned';
 import UsersMenuItem from './usersMenuItem/UsersMenuItem';
-import { userMenuItems } from '../../../../../../data/userMenuItems';
+import { userMenuItems } from 'data/userMenuItems';
 import { v4 as uuidv4 } from 'uuid';
 import LastMenuItem from './lastMenuItem/LastMenuItem';
 

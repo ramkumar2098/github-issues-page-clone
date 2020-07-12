@@ -1,5 +1,5 @@
 import React from 'react';
-import GithubLogoSVG from '../../../SVGs/GithubLogoSVG';
+import GithubLogoSVG from 'SVGs/GithubLogoSVG';
 
 function GithubLogo() {
   return (

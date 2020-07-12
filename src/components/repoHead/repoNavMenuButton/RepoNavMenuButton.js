@@ -1,5 +1,5 @@
 import React from 'react';
-import HorizontalKebabSVG from '../../../SVGs/HorizontalKebabSVG';
+import HorizontalKebabSVG from 'SVGs/HorizontalKebabSVG';
 import style from './RepoNavMenuButton.module.css';
 
 function RepoNavMenuButton({ toggleRepoNavMenu }) {

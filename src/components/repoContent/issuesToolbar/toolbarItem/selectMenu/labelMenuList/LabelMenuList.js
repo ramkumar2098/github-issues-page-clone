@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LabelMenuItem from './labelMenuItem/LabelMenuItem';
-import { labelMenuItems } from '../../../../../../data/labelMenuItems';
+import { labelMenuItems } from 'data/labelMenuItems';
 import { v4 as uuidv4 } from 'uuid';
 import NotFound from '../notFound/NotFound';
 import LabelMenuFooter from './labelMenuFooter/LabelMenuFooter';

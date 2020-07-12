@@ -1,6 +1,6 @@
 import React from 'react';
 import IssuesState from './issuesState/IssuesState';
-import { issuesStates } from '../../../data/issuesStates';
+import { issuesStates } from 'data/issuesStates';
 import { v4 as uuidv4 } from 'uuid';
 import style from './IssuesStates.module.css';
 

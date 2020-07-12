@@ -1,5 +1,5 @@
 import React from 'react';
-import PlusSVG from '../../../../SVGs/PlusSVG';
+import PlusSVG from 'SVGs/PlusSVG';
 import Dropdown from '../../../dropdown/Dropdown';
 import style from './New.module.css';
 

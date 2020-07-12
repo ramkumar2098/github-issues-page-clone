@@ -1,5 +1,5 @@
 import React from 'react';
-import PullRequestsSVG from '../../../../SVGs/PullRequestsSVG';
+import PullRequestsSVG from 'SVGs/PullRequestsSVG';
 import style from '../repoNavItem/RepoNavItem.module.css';
 
 function PullRequests({ displayIcon }) {

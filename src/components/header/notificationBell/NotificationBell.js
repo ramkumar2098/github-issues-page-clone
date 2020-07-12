@@ -1,5 +1,5 @@
 import React from 'react';
-import NotificationBellSVG from '../../../SVGs/NotificationBellSVG';
+import NotificationBellSVG from 'SVGs/NotificationBellSVG';
 
 function NotificationBell({ marginRight }) {
   return (

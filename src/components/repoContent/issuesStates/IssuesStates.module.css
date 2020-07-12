@@ -1,6 +1,7 @@
 .issuesStates {
   padding-left: 16px;
   display: flex;
+  white-space: nowrap;
 }
 
 @media (min-width: 540px) {

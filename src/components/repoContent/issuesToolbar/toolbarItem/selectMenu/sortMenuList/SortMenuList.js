@@ -1,6 +1,6 @@
 import React from 'react';
 import SortMenuItem from './sortMenuItem/SortMenuItem';
-import { sortMenuItems } from '../../../../../../data/sortMenuItems';
+import { sortMenuItems } from 'data/sortMenuItems';
 import { v4 as uuidv4 } from 'uuid';
 import Reactions from './reactions/Reactions';
 

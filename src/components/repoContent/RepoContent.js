@@ -1,6 +1,7 @@
 import React from 'react';
 import IssuesStates from './issuesStates/IssuesStates';
 import IssuesToolbar from './issuesToolbar/IssuesToolbar';
+import Issues from './issues/Issues';
 import style from './RepoContent.module.css';
 
 function RepoContent() {
@@ -10,6 +11,7 @@ function RepoContent() {
         <IssuesStates />
         <IssuesToolbar />
       </div>
+      <Issues />
     </div>
   );
 }

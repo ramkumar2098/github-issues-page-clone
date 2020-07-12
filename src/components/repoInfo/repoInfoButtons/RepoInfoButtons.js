@@ -1,7 +1,7 @@
 import React from 'react';
 import RepoInfoButton from './repoInfoButton/RepoInfoButton';
-import LabelsSVG from '../../../SVGs/LabelsSVG';
-import MilestonesSVG from '../../../SVGs/MilestonesSVG';
+import LabelsSVG from 'SVGs/LabelsSVG';
+import MilestonesSVG from 'SVGs/MilestonesSVG';
 import style from './RepoInfoButtons.module.css';
 
 function RepoInfoButtons({ displayCount }) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import RepoSVG from '../../../SVGs/RepoSVG';
+import RepoSVG from 'SVGs/RepoSVG';
 import style from './RepoTitle.module.css';
 
 function RepoTitle() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchSVG from '../../../../SVGs/SearchSVG';
+import SearchSVG from 'SVGs/SearchSVG';
 import style from './FilterSearch.module.css';
 
 function FilterSearch({ inputRef, value, handleChange }) {

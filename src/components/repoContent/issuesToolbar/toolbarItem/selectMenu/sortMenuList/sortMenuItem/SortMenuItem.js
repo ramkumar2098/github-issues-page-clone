@@ -1,6 +1,6 @@
 import React from 'react';
 import { selectMenuItem } from '../../selectMenuItem/SelectMenuItem.module.css';
-import CheckSVG from '../../../../../../../SVGs/CheckSVG';
+import CheckSVG from 'SVGs/CheckSVG';
 
 function SortMenuItem({ sortMenuItem, index }) {
   const aStyle = () =>

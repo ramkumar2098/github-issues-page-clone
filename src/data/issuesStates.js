@@ -1,5 +1,5 @@
-import IssuesSVG from '../SVGs/IssuesSVG';
-import CheckSVG from '../SVGs/CheckSVG';
+import IssuesSVG from 'SVGs/IssuesSVG';
+import CheckSVG from 'SVGs/CheckSVG';
 
 export const issuesStates = [
   {

@@ -1,6 +1,6 @@
 import React from 'react';
 import ToolbarItem from './toolbarItem/ToolbarItem';
-import { toolbarItems } from '../../../data/toolbarItems';
+import { toolbarItems } from 'data/toolbarItems';
 import { v4 as uuidv4 } from 'uuid';
 import style from './IssuesToolbar.module.css';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { navItemsList } from '../../../../data/navItemsList';
+import { navItemsList } from 'data/navItemsList';
 import { v4 as uuidv4 } from 'uuid';
 
 function NavItems() {

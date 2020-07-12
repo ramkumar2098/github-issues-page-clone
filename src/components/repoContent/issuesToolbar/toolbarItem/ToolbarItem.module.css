@@ -8,20 +8,3 @@
 .toolbarItem:hover {
   color: #24292e;
 }
-
-.textContent {
-  display: flex;
-  align-items: center;
-}
-
-.textContent > span:nth-child(2) {
-  display: none;
-  margin-top: 3px;
-  margin-left: 4px;
-}
-
-@media (min-width: 540px) {
-  .textContent > span:nth-child(2) {
-    display: inline-block;
-  }
-}

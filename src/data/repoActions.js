@@ -1,6 +1,6 @@
-import WatchSVG from '../SVGs/WatchSVG';
-import StarSVG from '../SVGs/StarSVG';
-import ForkSVG from '../SVGs/ForkSVG';
+import WatchSVG from 'SVGs/WatchSVG';
+import StarSVG from 'SVGs/StarSVG';
+import ForkSVG from 'SVGs/ForkSVG';
 
 export const repoActions = [
   {
