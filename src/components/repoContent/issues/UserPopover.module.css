@@ -1,0 +1,107 @@
+.userPopover {
+  width: 360px;
+  min-width: 320px;
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  position: absolute;
+  display: none;
+  bottom: 35px;
+  z-index: 1;
+}
+
+.userPopover:hover {
+  display: flex;
+}
+
+.userPopover::before {
+  content: '';
+  border: 8px solid transparent;
+  border-top-color: rgba(27, 31, 35, 0.149);
+  position: absolute;
+  bottom: -16px;
+  left: 25px;
+}
+
+.userPopover::after {
+  content: '';
+  border: 7px solid transparent;
+  border-top-color: #fff;
+  position: absolute;
+  bottom: -14px;
+  left: 26px;
+}
+
+.positionPopoverAtBottom {
+  bottom: auto;
+}
+
+.positionPopoverAtBottom::before {
+  border-top-color: transparent;
+  border-bottom-color: rgba(27, 31, 35, 0.149);
+  bottom: auto;
+  left: auto;
+  top: -16px;
+  left: 25px;
+}
+
+.positionPopoverAtBottom::after {
+  border-top-color: transparent;
+  border-bottom-color: #fff;
+  bottom: auto;
+  left: auto;
+  top: -14px;
+  left: 26px;
+}
+
+.userPopover > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.userDetails {
+  margin-left: 16px;
+}
+
+.userName {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #24292e;
+}
+
+.userID {
+  text-decoration: none;
+  font-size: 14px;
+  color: #586069;
+  margin-left: 4px;
+}
+
+.userName:hover,
+.userID:hover {
+  color: #0366d6;
+}
+
+.userProfile {
+  line-height: 1.5;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #24292e;
+}
+
+.location {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.location path {
+  fill: #586069;
+}
+
+.location > span {
+  margin-left: 4px;
+}

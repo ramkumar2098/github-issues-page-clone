@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from 'components/Avatar';
+import avatar from 'images/avatar.png';
 import PullRequestsSVG from 'SVGs/PullRequestsSVG';
 import CommentSVG from 'SVGs/CommentSVG';
 import style from './IssueDetails.module.css';
@@ -10,7 +10,7 @@ function IssueDetails() {
       <span className={style.issueDetail}>
         <span>
           <a href="#">
-            <Avatar />
+            <img src={avatar} />
           </a>
         </span>
       </span>

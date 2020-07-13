@@ -12,6 +12,10 @@
   font-weight: 600;
 }
 
+.issue:hover + div {
+  display: block;
+}
+
 .issueLabels {
   display: block;
   line-height: 1.5;
@@ -37,6 +41,10 @@
 .issueOpened > a {
   text-decoration: none;
   color: #586069;
+}
+
+.issueOpened > a:hover + div {
+  display: flex;
 }
 
 .overlay {
@@ -71,3 +79,5 @@
     display: none;
   }
 }
+
+/* issueTitle instead of issue */

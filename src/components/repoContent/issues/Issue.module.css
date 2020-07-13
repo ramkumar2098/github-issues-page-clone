@@ -1,0 +1,9 @@
+.issue {
+  border-top: 1px solid #e1e4e8;
+  display: flex;
+  position: relative;
+}
+
+.issue:hover {
+  background-color: #f6f8fa;
+}
