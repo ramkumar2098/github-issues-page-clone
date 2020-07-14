@@ -5,14 +5,14 @@
   flex: auto;
 }
 
-.issue {
+.issueTitle {
   text-decoration: none;
   color: #24292e;
   font-size: 16px;
   font-weight: 600;
 }
 
-.issue:hover + div {
+.issueTitle:hover + div {
   display: block;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .issueOpened > a:hover + div {
-  display: flex;
+  display: block;
 }
 
 .overlay {
@@ -59,7 +59,7 @@
   .issueContainer {
     padding-right: 8px;
   }
-  .issue:hover {
+  .issueTitle:hover {
     color: #0366d6;
   }
 
@@ -79,5 +79,3 @@
     display: none;
   }
 }
-
-/* issueTitle instead of issue */

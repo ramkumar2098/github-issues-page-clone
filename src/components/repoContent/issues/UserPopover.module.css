@@ -2,18 +2,17 @@
   width: 360px;
   min-width: 320px;
   background-color: #fff;
-  padding: 16px;
   border: 1px solid #e1e4e8;
   border-radius: 6px;
   box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
   position: absolute;
-  display: none;
   bottom: 35px;
+  display: none;
   z-index: 1;
 }
 
 .userPopover:hover {
-  display: flex;
+  display: block;
 }
 
 .userPopover::before {
@@ -41,29 +40,58 @@
 .positionPopoverAtBottom::before {
   border-top-color: transparent;
   border-bottom-color: rgba(27, 31, 35, 0.149);
-  bottom: auto;
-  left: auto;
   top: -16px;
-  left: 25px;
+  bottom: auto;
 }
 
 .positionPopoverAtBottom::after {
   border-top-color: transparent;
   border-bottom-color: #fff;
-  bottom: auto;
-  left: auto;
   top: -14px;
-  left: 26px;
+  bottom: auto;
 }
 
-.userPopover > img {
+.status {
+  padding: 8px;
+  border-bottom: 1px solid #e1e4e8;
+  display: flex;
+  align-items: center;
+}
+
+.status > img {
+  width: 18px;
+  margin-right: 4px;
+}
+
+.main {
+  padding: 16px;
+  display: flex;
+}
+
+.main img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
 
+.pro {
+  display: inline-block;
+  background-color: initial;
+  color: #6f42c1;
+  line-height: 18px;
+  padding: 0 7px;
+  border-radius: 2em;
+  border: 1px solid #8a63d2;
+  margin: 8px;
+  margin-top: 5px;
+}
+
 .userDetails {
   margin-left: 16px;
+}
+
+.userDetails > div:first-child {
+  white-space: nowrap;
 }
 
 .userName {
@@ -104,4 +132,56 @@
 
 .location > span {
   margin-left: 4px;
+}
+
+.commit {
+  padding: 16px;
+  border-top: 1px solid #e1e4e8;
+  display: flex;
+  align-items: center;
+}
+
+.commit > span {
+  margin-left: 6px;
+}
+
+.commit path {
+  fill: #6a737d;
+}
+
+.sponsor {
+  padding: 16px;
+  border-top: 1px solid #e1e4e8;
+}
+
+.sponsor > a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #fafbfc;
+  color: #24292e;
+  padding: 6px 15px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+}
+
+.sponsor > a:hover {
+  background-color: #f4f7f7;
+}
+
+.sponsor > a:hover svg {
+  transform: scale(1.15);
+  transition-duration: 0.1s;
+}
+
+.sponsor > a > span {
+  display: flex;
+  align-items: center;
+}
+
+.sponsor > a > span > span {
+  margin-left: 8px;
+}
+
+.sponsor path {
+  fill: #ea4aaa;
 }
