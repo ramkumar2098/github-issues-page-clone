@@ -1,61 +1,157 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import IssuePopover from './IssuePopover';
 import UserPopover from './UserPopover';
 import style from './IssueContainer.module.css';
 
-function IssuesContainer() {
+function IssuesContainer(props) {
+  const { issueTitle, issueLabels, issueNo, issueOpened, userID } = props.issue;
+
   const [bottom, setBottom] = useState(null);
   const [issuePopoverLeft, setIssuePopoverLeft] = useState(null);
   const [userPopoverLeft, setUserPopoverLeft] = useState(null);
   const [top, setTop] = useState(null);
 
-  const handleMouseOver = e => {
-    const issueContainer = document.querySelector('.issueContainer');
+  const [displayIssuePopover, setDisplayIssuePopover] = useState(false);
+  const [displayUserPopover, setDisplayUserPopover] = useState(false);
+
+  const issueTitleRef = useRef();
+  const userIDRef = useRef();
+
+  const issuePopoverOffset = issuePopover => {
+    const issueContainer = issueTitleRef.current.parentElement;
     const rect = issueContainer.getBoundingClientRect();
     const issueContainerHeight = rect.bottom - rect.top;
 
-    const popover = e.target.nextSibling;
+    const popover = issuePopover;
     const rect1 = popover.getBoundingClientRect();
     const popoverHeight = rect1.bottom - rect1.top;
 
-    const element = e.target;
+    const element = issueTitleRef.current;
     const rect2 = element.getBoundingClientRect();
     const elementPosition = rect2.top - 12;
 
     const elementWidth = rect2.right - rect2.left;
     setIssuePopoverLeft(elementWidth / 2);
 
-    const elemposition = rect2.right - elementWidth / 2;
-    setUserPopoverLeft(elemposition - rect.left);
-
     popoverHeight < elementPosition
       ? setBottom(issueContainerHeight)
       : setBottom(null);
+  };
+
+  let id;
+
+  const handleMouseOver = () => {
+    id = setTimeout(() => {
+      setDisplayIssuePopover(true);
+    }, 200);
+  };
+
+  let issuePopoverID;
+
+  const handleMouseOut = () => {
+    clearTimeout(id);
+
+    issuePopoverID = setTimeout(() => {
+      setDisplayIssuePopover(false);
+    }, 200);
+  };
+
+  const userPopoverOffset = userPopover => {
+    const issueContainer = userIDRef.current.parentElement.parentElement;
+    const rect = issueContainer.getBoundingClientRect();
+    const issueContainerHeight = rect.bottom - rect.top;
+
+    const popover = userPopover;
+    const rect1 = popover.getBoundingClientRect();
+    const popoverHeight = rect1.bottom - rect1.top;
+
+    const element = userIDRef.current;
+    const rect2 = element.getBoundingClientRect();
+    const elementPosition = rect2.top - 12;
+
+    const elemposition = rect2.right - (rect2.right - rect2.left) / 2;
+    setUserPopoverLeft(elemposition - rect.left);
 
     popoverHeight > elementPosition
       ? setTop(issueContainerHeight)
       : setTop(null);
   };
 
+  let id2;
+
+  const handleMouseOver2 = () => {
+    id2 = setTimeout(() => {
+      setDisplayUserPopover(true);
+    }, 200);
+  };
+
+  let userPopoverID;
+
+  const handleMouseOut2 = () => {
+    clearTimeout(id2);
+
+    userPopoverID = setTimeout(() => {
+      setDisplayUserPopover(false);
+    }, 200);
+  };
+
   return (
-    <div className={style.issueContainer + ' issueContainer'}>
-      <a href="#" onMouseOver={handleMouseOver} className={style.issueTitle}>
-        Error: "Commit tree does not contain fiber 20379. This is a bug in React
-        DevTools."
+    <div className={style.issueContainer}>
+      <a
+        href="#"
+        ref={issueTitleRef}
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+        className={style.issueTitle}
+      >
+        {issueTitle}
       </a>
-      <IssuePopover bottom={bottom && bottom + 4} left={issuePopoverLeft} />
-      <span className={style.issueLabels}>
-        <a href="#" className={style.issueLabel}>
-          Status: Unconfirmed
-        </a>
-      </span>
+      {displayIssuePopover && (
+        <IssuePopover
+          {...props}
+          bottom={bottom && bottom + 4}
+          left={issuePopoverLeft}
+          issuePopoverOffset={issuePopoverOffset}
+          keepIssuePopoverOpen={() => clearTimeout(issuePopoverID)}
+          closeIssuePopover={() => setDisplayIssuePopover(false)}
+        />
+      )}
+      {issueLabels.length ? (
+        <span className={style.issueLabels}>
+          {issueLabels.map(issueLabel => (
+            <a
+              href="#"
+              className={style.issueLabel}
+              style={issueLabelStyle(issueLabel)}
+            >
+              {issueLabel}
+            </a>
+          ))}
+        </span>
+      ) : null}
       <div className={style.issueOpened}>
-        <span>#19320 opened 2 hours ago by</span>
-        <a href="#" onMouseOver={handleMouseOver}>
+        <span>
+          {issueNo} opened {issueOpened} by
+        </span>
+        <a
+          href="#"
+          ref={userIDRef}
+          onMouseOver={handleMouseOver2}
+          onMouseOut={handleMouseOut2}
+        >
           {' '}
-          theBstar
+          {userID}
         </a>
-        <UserPopover top={top && top + 3} left={userPopoverLeft} />
+        {displayUserPopover && (
+          <UserPopover
+            {...props}
+            top={top && top + 3}
+            left={userPopoverLeft}
+            userPopoverOffset={userPopoverOffset}
+            keepUserPopoverOpen={() => clearTimeout(userPopoverID)}
+            closeUserPopover={() => setDisplayUserPopover(false)}
+          />
+        )}
       </div>
       <a href="#" className={style.overlay}></a>
     </div>
@@ -63,3 +159,26 @@ function IssuesContainer() {
 }
 
 export default IssuesContainer;
+
+function issueLabelStyle(issueLabel) {
+  switch (issueLabel) {
+    case 'Status: Unconfirmed':
+      return { backgroundColor: '#d4c5f9' };
+    case 'Component: Developer Tools':
+      return { backgroundColor: '#fbca04' };
+    case 'Resolution: Needs More Information':
+      return { backgroundColor: '#fffde7' };
+    case 'Component: ESLint Rules':
+      return { backgroundColor: '#f7afdb' };
+    case 'Component: DOM':
+      return { backgroundColor: '#fef2c0' };
+    case 'Type: Bug':
+      return { backgroundColor: '#b60205', color: '#fff' };
+    case 'Component: Build Infrastructure':
+      return { backgroundColor: '#f9d0c4' };
+    case 'Type: Discussion':
+      return { backgroundColor: '#fef2c0' };
+    default:
+      return;
+  }
+}

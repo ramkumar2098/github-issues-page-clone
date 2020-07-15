@@ -10,10 +10,7 @@
   color: #24292e;
   font-size: 16px;
   font-weight: 600;
-}
-
-.issueTitle:hover + div {
-  display: block;
+  margin-right: 4px;
 }
 
 .issueLabels {
@@ -25,11 +22,12 @@
   display: inline-block;
   text-decoration: none;
   background-color: #d4c5f9;
-  color: #000000;
+  color: #000;
   font-size: 12px;
   padding: 0 7px;
   border: 1px solid transparent;
   border-radius: 2em;
+  margin-right: 4px;
 }
 
 .issueOpened {
@@ -41,10 +39,6 @@
 .issueOpened > a {
   text-decoration: none;
   color: #586069;
-}
-
-.issueOpened > a:hover + div {
-  display: block;
 }
 
 .overlay {
@@ -65,10 +59,6 @@
 
   .issueLabels {
     display: inline;
-  }
-
-  .issueLabel {
-    margin-left: 4px;
   }
 
   .issueOpened > a:hover {

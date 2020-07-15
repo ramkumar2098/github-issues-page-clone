@@ -1,34 +1,41 @@
 import React from 'react';
-import avatar from 'images/avatar.png';
 import PullRequestsSVG from 'SVGs/PullRequestsSVG';
 import CommentSVG from 'SVGs/CommentSVG';
 import style from './IssueDetails.module.css';
 
-function IssueDetails() {
+function IssueDetails({ issue }) {
+  const { issueAssignedTo, pullRequests, comments } = issue;
+
   return (
     <div className={style.issueDetails}>
       <span className={style.issueDetail}>
-        <span>
-          <a href="#">
-            <img src={avatar} />
-          </a>
-        </span>
+        {issueAssignedTo && (
+          <span>
+            <a href="#">
+              <img src={issueAssignedTo} />
+            </a>
+          </span>
+        )}
       </span>
       <span className={style.issueDetail}>
-        <span>
-          <a href="#">
-            <PullRequestsSVG />
-            <span>1</span>
-          </a>
-        </span>
+        {pullRequests && (
+          <span>
+            <a href="#">
+              <PullRequestsSVG />
+              <span>{pullRequests}</span>
+            </a>
+          </span>
+        )}
       </span>
       <span className={style.issueDetail}>
-        <span>
-          <a href="#">
-            <CommentSVG />
-            <span>15</span>
-          </a>
-        </span>
+        {comments && (
+          <span>
+            <a href="#">
+              <CommentSVG />
+              <span>{comments}</span>
+            </a>
+          </span>
+        )}
       </span>
     </div>
   );

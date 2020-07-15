@@ -21,6 +21,9 @@
   .issuesToolbar {
     justify-content: flex-start;
     border: 1px solid #e1e4e8;
+    border-bottom: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 
   .issuesToolbar > :last-child {

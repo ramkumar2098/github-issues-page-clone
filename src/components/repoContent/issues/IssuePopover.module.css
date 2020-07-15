@@ -3,17 +3,13 @@
   min-width: 320px;
   background-color: #fff;
   padding: 16px;
+  padding-bottom: 12px;
   border: 1px solid #e1e4e8;
   border-radius: 6px;
   box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
   position: absolute;
   top: 40px;
-  display: none;
   z-index: 1;
-}
-
-.issuePopover:hover {
-  display: block;
 }
 
 .issuePopover::before {
@@ -111,7 +107,7 @@
 }
 
 .issueLabel {
-  max-width: 125px;
+  max-width: 135px;
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;

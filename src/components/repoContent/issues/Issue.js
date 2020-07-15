@@ -4,12 +4,12 @@ import IssueContainer from './IssueContainer';
 import IssueDetails from './IssueDetails';
 import style from './Issue.module.css';
 
-function Issue() {
+function Issue(props) {
   return (
     <div className={style.issue}>
       <IssuesIcon />
-      <IssueContainer />
-      <IssueDetails />
+      <IssueContainer {...props} />
+      <IssueDetails {...props} />
     </div>
   );
 }
