@@ -48,7 +48,7 @@
   color: #fff;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .repoNavMenu {
     padding: 4px 0;
   }
@@ -58,7 +58,7 @@
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 768px) {
   .repoNavMenu {
     right: 24px;
   }

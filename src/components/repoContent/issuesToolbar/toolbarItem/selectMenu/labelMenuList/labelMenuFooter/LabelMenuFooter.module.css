@@ -24,7 +24,7 @@
   box-shadow: inset 0 -1px 0 #d1d5da;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .labelMenuFooter {
     padding: 7px 16px;
     position: static;

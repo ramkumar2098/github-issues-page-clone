@@ -3,10 +3,10 @@ import BurgerNav from './burgerNav/BurgerNav';
 import GithubLogo from '../githubLogo/GithubLogo';
 import NotificationBell from '../notificationBell/NotificationBell';
 
-function MobileHeader() {
+function MobileHeader(props) {
   return (
     <div>
-      <BurgerNav />
+      <BurgerNav {...props} />
       <GithubLogo />
       <NotificationBell />
     </div>

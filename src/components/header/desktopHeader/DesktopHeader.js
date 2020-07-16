@@ -1,6 +1,6 @@
 import React from 'react';
 import GithubLogo from '../githubLogo/GithubLogo';
-import SearchField from '../../searchField/SearchField';
+import SearchField from '../searchField/SearchField';
 import HeaderNavItems from './headerNavItems/HeaderNavItems';
 import NotificationBell from '../notificationBell/NotificationBell';
 import New from './new/New';
@@ -17,12 +17,12 @@ const searchFieldStyles = {
   marginBottom: 0,
 };
 
-function DesktopHeader() {
+function DesktopHeader(props) {
   return (
     <div style={{ padding: '8px 16px' }}>
       <span style={desktopHead}>
         <GithubLogo />
-        <SearchField styles={searchFieldStyles} />
+        <SearchField {...props} styles={searchFieldStyles} />
         <HeaderNavItems />
       </span>
       <span style={desktopHead}>

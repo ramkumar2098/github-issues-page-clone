@@ -1,0 +1,41 @@
+.issueDetails {
+  width: 25%;
+  padding-top: 8px;
+  padding-right: 16px;
+  flex-shrink: 0;
+  display: none;
+}
+
+.issueDetail {
+  margin-left: 8px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.issueDetail path {
+  fill: #586069;
+}
+
+.issueDetail a {
+  text-decoration: none;
+  color: #586069;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+}
+
+.issueDetail img {
+  width: 20px;
+  border-radius: 50%;
+}
+
+.issueDetail a > span {
+  margin-left: 3px;
+}
+
+@media (min-width: 544px) {
+  .issueDetails {
+    display: flex;
+  }
+}

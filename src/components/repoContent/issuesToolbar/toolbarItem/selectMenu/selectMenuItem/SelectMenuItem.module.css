@@ -39,7 +39,7 @@
   white-space: nowrap;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .selectMenuItem {
     padding-top: 7px;
     padding-bottom: 7px;

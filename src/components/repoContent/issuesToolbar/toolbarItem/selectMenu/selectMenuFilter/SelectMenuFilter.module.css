@@ -23,7 +23,7 @@
   box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .selectMenuFilter {
     padding: 8px;
   }

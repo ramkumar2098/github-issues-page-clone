@@ -1,12 +1,12 @@
 import React from 'react';
-import Dropdown from '../../../dropdown/Dropdown';
+import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
 import style from './FilterButton.module.css';
 
 function FilterButton({ toggleModal }) {
   return (
     <button onClick={toggleModal} className={style.filterBtn + ' filterBtn'}>
       <span>Filters</span>
-      <Dropdown color="#444d56" />
+      <DropdownCaret color="#444d56" />
     </button>
   );
 }

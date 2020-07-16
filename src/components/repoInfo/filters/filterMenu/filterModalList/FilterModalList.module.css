@@ -38,7 +38,7 @@
   margin-left: 8px;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .modalList > li > a {
     padding-top: 7px;
     padding-bottom: 7px;

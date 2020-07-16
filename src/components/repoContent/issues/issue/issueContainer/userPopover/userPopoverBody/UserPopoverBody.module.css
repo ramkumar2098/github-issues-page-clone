@@ -1,0 +1,75 @@
+.userPopoverBody {
+  padding: 16px;
+  display: flex;
+}
+
+.userPopoverBody img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.userPopoverBody > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.pro {
+  display: inline-block;
+  background-color: initial;
+  color: #6f42c1;
+  line-height: 18px;
+  padding: 0 7px;
+  border-radius: 2em;
+  border: 1px solid #8a63d2;
+  margin: 8px;
+  margin-bottom: 0;
+}
+
+.userDetails {
+  margin-left: 16px;
+}
+
+.userDetails > div:first-child {
+  white-space: nowrap;
+}
+
+.userName {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #24292e;
+  margin-right: 8px;
+}
+
+.userID {
+  text-decoration: none;
+  font-size: 14px;
+  color: #586069;
+}
+
+.userName:hover,
+.userID:hover {
+  color: #0366d6;
+}
+
+.userProfile {
+  line-height: 1.5;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #24292e;
+}
+
+.location {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.location path {
+  fill: #586069;
+}
+
+.location > span {
+  margin-left: 4px;
+}

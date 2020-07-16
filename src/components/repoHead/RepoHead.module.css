@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-@media (min-width: 770px) {
+@media (min-width: 768px) {
   .repoHead > :nth-child(1) {
     padding: 16px 24px 0;
   }
@@ -30,7 +30,7 @@
   }
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 1012px) {
   .repoHead > :nth-child(1) {
     padding: 16px 32px 0;
   }

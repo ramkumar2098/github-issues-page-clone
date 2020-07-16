@@ -1,10 +1,9 @@
 import React from 'react';
 import { filterModalListItems } from 'data/filterModalListItems';
-import { v4 as uuidv4 } from 'uuid';
 
 function FilterModalListItems() {
   return filterModalListItems.map(filterModalListitem => (
-    <li key={uuidv4()}>
+    <li key={filterModalListitem}>
       <a href="#">{filterModalListitem}</a>
     </li>
   ));

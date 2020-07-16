@@ -18,6 +18,16 @@ import avatar17 from 'images/1737482.png';
 import avatar18 from 'images/2646229.png';
 import avatar19 from 'images/4465755.jpeg';
 import avatar20 from 'images/3336280.png';
+import avatar21 from 'images/456610.jpeg';
+import avatar22 from 'images/545965.jpeg';
+import avatar23 from 'images/3624098.jpeg';
+import avatar24 from 'images/2177796.jpeg';
+import avatar25 from 'images/288087.png';
+import avatar26 from 'images/558411.jpeg';
+import avatar27 from 'images/1609236.png';
+import avatar28 from 'images/1942967.jpeg';
+import avatar29 from 'images/634414.png';
+import avatar30 from 'images/97944.jpeg';
 
 export const userMenuItems = [
   {
@@ -119,5 +129,55 @@ export const userMenuItems = [
     avatar: avatar20,
     userID: 'abhinav04sharma',
     userName: 'Abhinav Sharma',
+  },
+  {
+    avatar: avatar21,
+    userID: 'abirchall',
+    userName: 'Andrew Birchall',
+  },
+  {
+    avatar: avatar22,
+    userID: 'abullrd',
+    userName: 'Alex Bullard',
+  },
+  {
+    avatar: avatar23,
+    userID: 'acdlite',
+    userName: 'Andrew Clark',
+  },
+  {
+    avatar: avatar24,
+    userID: 'acgh',
+    userName: 'Alex Costanza',
+  },
+  {
+    avatar: avatar25,
+    userID: 'achao',
+    userName: '',
+  },
+  {
+    avatar: avatar26,
+    userID: 'aching',
+    userName: 'Avery Ching',
+  },
+  {
+    avatar: avatar27,
+    userID: 'achow',
+    userName: 'Alex Chow',
+  },
+  {
+    avatar: avatar28,
+    userID: 'aCorrado',
+    userName: '',
+  },
+  {
+    avatar: avatar29,
+    userID: 'adamgross42',
+    userName: 'Adam Gross',
+  },
+  {
+    avatar: avatar30,
+    userID: 'adamjernst',
+    userName: 'Adam Ernst',
   },
 ];

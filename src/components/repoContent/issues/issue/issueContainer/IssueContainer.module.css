@@ -1,0 +1,50 @@
+.issueContainer {
+  line-height: 1.25;
+  padding: 8px;
+  padding-right: 16px;
+  flex: auto;
+}
+
+.issueTitle {
+  text-decoration: none;
+  color: #24292e;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.issueOpened {
+  color: #586069;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.issueOpened > a {
+  text-decoration: none;
+  color: #586069;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .issueContainer {
+    padding-right: 8px;
+  }
+  .issueTitle:hover {
+    color: #0366d6;
+  }
+
+  .issueOpened > a:hover {
+    color: #0366d6;
+  }
+
+  .overlay {
+    display: none;
+  }
+}

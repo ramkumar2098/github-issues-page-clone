@@ -1,0 +1,49 @@
+.issuePopover {
+  width: 360px;
+  min-width: 320px;
+  background-color: #fff;
+  padding: 16px;
+  padding-bottom: 12px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+}
+
+.issuePopover::before {
+  content: '';
+  border: 8px solid transparent;
+  border-bottom-color: rgba(27, 31, 35, 0.149);
+  position: absolute;
+  top: -16px;
+  left: 25px;
+}
+
+.issuePopover::after {
+  content: '';
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+  position: absolute;
+  top: -14px;
+  left: 26px;
+}
+
+.positionPopoverAtTop {
+  top: auto;
+}
+
+.positionPopoverAtTop::before {
+  border-top-color: rgba(27, 31, 35, 0.149);
+  border-bottom-color: transparent;
+  top: auto;
+  bottom: -16px;
+}
+
+.positionPopoverAtTop::after {
+  border-top-color: #fff;
+  border-bottom-color: transparent;
+  top: auto;
+  bottom: -14px;
+}

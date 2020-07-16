@@ -1,0 +1,16 @@
+.issuePopoverTitle {
+  text-decoration: none;
+}
+
+.issuePopoverTitle:hover > span {
+  color: #0366d6;
+}
+
+.issuePopoverTitle > span:first-child {
+  color: #24292e;
+  font-weight: 600;
+}
+
+.issuePopoverTitle > span:nth-child(2) {
+  color: #586069;
+}

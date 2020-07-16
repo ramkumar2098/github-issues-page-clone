@@ -13,7 +13,7 @@
   background-color: #2c974b;
 }
 
-@media (min-width: 770px) {
+@media (min-width: 768px) {
   .newIssue {
     margin-left: 16px;
   }

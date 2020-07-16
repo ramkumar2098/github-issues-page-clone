@@ -6,7 +6,7 @@ function ToolbarItemName({ textContent }) {
   return (
     <span className={style.toolbarItemName}>
       <span>{textContent}</span>
-      <DropdownCaret />
+      <DropdownCaret color="#444d56" />
     </span>
   );
 }

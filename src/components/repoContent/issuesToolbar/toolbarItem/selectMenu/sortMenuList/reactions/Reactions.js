@@ -1,6 +1,5 @@
 import React from 'react';
 import { emojis } from 'data/emojis';
-import { v4 as uuidv4 } from 'uuid';
 import style from './Reactions.module.css';
 
 function Reactions() {
@@ -8,8 +7,8 @@ function Reactions() {
     <div>
       <div className={style.reactionsHeader}>Most reactions</div>
       <div className={style.reactions}>
-        {emojis.map(emoji => (
-          <a href="#" key={uuidv4()}>
+        {emojis.map((emoji, index) => (
+          <a href="#" key={index}>
             <img src={emoji} />
           </a>
         ))}

@@ -9,7 +9,7 @@
   margin-left: 4px;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .toolbarItemName > span:nth-child(2) {
     display: inline-block;
   }

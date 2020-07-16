@@ -1,5 +1,5 @@
 import React from 'react';
-import NavItems from '../../../navbar/navBarItems/navItems/NavItems';
+import NavItems from '../../navItems/NavItems';
 import style from './HeaderNavItems.module.css';
 
 function HeaderNavItems() {

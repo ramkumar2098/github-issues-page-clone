@@ -13,7 +13,7 @@
   display: none;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .toolbarItem > span:nth-child(2) {
     display: inline-block;
   }
@@ -35,14 +35,14 @@
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 768px) {
   .issuesToolbar > :nth-child(3),
   .issuesToolbar > :nth-child(4) {
     display: block;
   }
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 1012px) {
   .issuesToolbar {
     padding: 0;
     border: 0;

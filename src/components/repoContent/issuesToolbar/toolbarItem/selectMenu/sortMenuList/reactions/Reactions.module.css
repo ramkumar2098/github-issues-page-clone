@@ -29,7 +29,7 @@
   width: 1em;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .reactions {
     padding: 8px;
   }

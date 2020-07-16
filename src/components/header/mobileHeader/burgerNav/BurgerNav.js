@@ -1,11 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import BurgerNavSVG from 'SVGs/BurgerNavSVG';
-import { DisplayNavBarContext } from '../../../Container';
 import style from './BurgerNav.module.css';
 
-function BurgerNav() {
-  const toggleNavBar = useContext(DisplayNavBarContext);
-
+function BurgerNav({ toggleNavBar }) {
   return (
     <button onClick={toggleNavBar} className={style.burgerNav}>
       <BurgerNavSVG />

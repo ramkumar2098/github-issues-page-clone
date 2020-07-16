@@ -23,7 +23,7 @@
   fill: #24292e;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .modalHeader > span,
   .close {
     padding: 7px 7px 7px 16px;

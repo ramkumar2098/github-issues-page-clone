@@ -4,7 +4,7 @@
   white-space: nowrap;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .issuesStates {
     padding: 0;
   }

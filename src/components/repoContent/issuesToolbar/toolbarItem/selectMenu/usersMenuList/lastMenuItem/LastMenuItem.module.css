@@ -18,7 +18,7 @@
   color: #6a737d;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .lastMenuItem {
     padding-top: 7px;
     padding-bottom: 7px;

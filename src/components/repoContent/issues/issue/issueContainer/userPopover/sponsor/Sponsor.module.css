@@ -1,0 +1,36 @@
+.sponsor {
+  padding: 16px;
+  border-top: 1px solid #e1e4e8;
+}
+
+.sponsor > a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #fafbfc;
+  color: #24292e;
+  padding: 6px 15px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+}
+
+.sponsor > a:hover {
+  background-color: #f4f7f7;
+}
+
+.sponsor > a:hover svg {
+  transform: scale(1.15);
+  transition-duration: 0.1s;
+}
+
+.sponsor > a > span {
+  display: flex;
+  align-items: center;
+}
+
+.sponsor > a > span > span {
+  margin-left: 8px;
+}
+
+.sponsor path {
+  fill: #ea4aaa;
+}

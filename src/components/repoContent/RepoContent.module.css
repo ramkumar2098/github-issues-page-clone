@@ -3,19 +3,19 @@
   margin: auto;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 544px) {
   .repoContent {
     padding: 0 16px;
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 768px) {
   .repoContent {
     padding: 0 24px;
   }
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 1012px) {
   .repoContent {
     padding: 0 32px;
   }
