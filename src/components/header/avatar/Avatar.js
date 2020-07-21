@@ -4,7 +4,7 @@ import avatar from 'images/avatar.png';
 const style = {
   width: '20px',
   borderRadius: '50%',
-  marginRight: '0.3rem',
+  marginRight: '0.1rem',
 };
 
 function Avatar() {

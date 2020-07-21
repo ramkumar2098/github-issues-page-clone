@@ -1,0 +1,22 @@
+.githubLogo {
+  display: none;
+}
+
+.githubLogo:hover path {
+  fill: #959da5;
+}
+
+.githubLogo > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.githubLogo path {
+  fill: #c6cbd1;
+}
+
+@media (min-width: 1012px) {
+  .githubLogo {
+    display: inline-block;
+  }
+}

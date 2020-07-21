@@ -1,0 +1,32 @@
+.setStatus {
+  padding: 0 16px;
+  margin: 8px 0;
+}
+
+.setStatus > a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #586069;
+  padding: 4px 8px 8px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.setStatus > a:hover path {
+  fill: #0366d6 !important;
+}
+
+.setStatus > a:hover > span {
+  color: #0366d6;
+}
+
+.setStatus path {
+  fill: #586069;
+}
+
+.setStatus span {
+  margin-top: 1px;
+  margin-left: 8px;
+}

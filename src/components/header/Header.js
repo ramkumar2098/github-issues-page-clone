@@ -8,7 +8,7 @@ function Header() {
   const [displayBurgerMenu, setDisplayBurgerMenu] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const mediaQ = window.matchMedia('(min-width: 1010px)');
+  const mediaQ = window.matchMedia('(min-width: 1012px)');
   const [desktopView, setDesktopView] = useState(mediaQ.matches);
   mediaQ.onchange = () => setDesktopView(mediaQ.matches);
 

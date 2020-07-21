@@ -1,0 +1,70 @@
+.aboutPopoverBody {
+  padding: 16px;
+  display: flex;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.userDetails {
+  margin-left: 16px;
+}
+
+.userDetails > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userName {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #24292e;
+  margin-right: 4px;
+}
+
+.userID {
+  text-decoration: none;
+  font-size: 14px;
+  color: #586069;
+}
+
+.userName:hover,
+.userID:hover {
+  color: #0366d6;
+}
+
+.verified {
+  float: right;
+  font-size: 12px;
+  color: #22863a;
+  padding: 0 7px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+}
+
+.userProfile {
+  line-height: 1.5;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #586069;
+}
+
+.location {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.location path {
+  fill: #586069;
+}
+
+.location > span {
+  margin-left: 4px;
+  font-size: 12px;
+  color: #586069;
+}

@@ -2,10 +2,10 @@ import React from 'react';
 import DropdownCaret from '../../../../dropdownCaret/DropdownCaret';
 import style from './ToolbarItemName.module.css';
 
-function ToolbarItemName({ textContent }) {
+function ToolbarItemName({ toolbarItem }) {
   return (
     <span className={style.toolbarItemName}>
-      <span>{textContent}</span>
+      <span>{toolbarItem}</span>
       <DropdownCaret color="#444d56" />
     </span>
   );

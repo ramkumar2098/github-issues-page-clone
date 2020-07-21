@@ -1,0 +1,11 @@
+.pagination {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+@media (min-width: 544px) {
+  .pagination {
+    margin-bottom: 16px;
+  }
+}

@@ -7,7 +7,7 @@ function IssuesStates() {
   return (
     <div className={style.issuesStates}>
       {issuesStates.map(issuesState => (
-        <IssuesState key={issuesState.className} issuesState={issuesState} />
+        <IssuesState key={issuesState.state} issuesState={issuesState} />
       ))}
     </div>
   );

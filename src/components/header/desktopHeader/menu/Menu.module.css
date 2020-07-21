@@ -1,0 +1,58 @@
+.menu {
+  list-style-type: none;
+  background-color: #fff;
+  width: 160px;
+  padding: 4px 0;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  margin: 2px 0 0;
+  line-height: 1.5;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  box-shadow: 0 8px 24px #959da533;
+  z-index: 1;
+}
+
+.menu::before,
+.menu::after {
+  position: absolute;
+  left: auto;
+  display: inline-block;
+  content: '';
+}
+
+.menu::before {
+  top: -16px;
+  right: 9px;
+  border: 8px solid transparent;
+  border-bottom-color: #1b1f2326;
+}
+
+.menu::after {
+  top: -14px;
+  right: 10px;
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+}
+
+.menu > li > a {
+  color: #24292e;
+  padding: 4px 8px 4px 16px;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.menu > li > a:hover,
+.menu > li > a:focus {
+  outline: none;
+  background-color: #0366d6;
+  color: #fff;
+}
+
+.thisRepository {
+  font-size: 12px;
+  color: #586069;
+  padding: 4px 16px;
+}

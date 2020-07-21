@@ -10,14 +10,14 @@ function RepoInfoButtons({ displayCount }) {
       <RepoInfoButton
         className={style.labels}
         Icon={LabelsSVG}
-        textContent="Labels"
+        repoInfoButton="Labels"
         count="56"
         displayCount={displayCount}
       />
       <RepoInfoButton
         className={style.milestones}
         Icon={MilestonesSVG}
-        textContent="Milestones"
+        repoInfoButton="Milestones"
         count="1"
         displayCount={displayCount}
       />

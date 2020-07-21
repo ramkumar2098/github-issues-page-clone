@@ -27,7 +27,7 @@ function MilestonesMenuList({ value }) {
             milestonesMenuItem={milestonesMenuItem}
           />
         ))}
-      {notFound && <NotFound textContent="milestones" />}
+      {notFound && <NotFound menuItem="milestones" />}
     </div>
   );
 }

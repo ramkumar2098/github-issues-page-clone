@@ -15,18 +15,18 @@ function Filters() {
   useEffect(() => {
     ['click', 'keyup'].forEach(event => {
       window.addEventListener(event, e => {
-        (!e.target.matches(
-          '.filterBtn, .filterBtn *, .filterContent, .filterContent *'
-        ) ||
-          e.keyCode === 27) &&
-          closeModal();
+        event === 'click'
+          ? !e.target.matches(
+              '.filterBtn, .filterBtn *, .filterContent, .filterContent *'
+            ) && closeModal()
+          : e.keyCode === 27 && closeModal();
       });
     });
   }, []);
 
   return (
     <div className={style.filters}>
-      <FilterButton toggleModal={toggleModal} />
+      <FilterButton displayModal={displayModal} toggleModal={toggleModal} />
       <FilterMenu displayModal={displayModal} closeModal={closeModal} />
       <FilterSearch
         value={value}

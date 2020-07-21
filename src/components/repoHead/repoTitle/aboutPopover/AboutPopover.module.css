@@ -1,0 +1,45 @@
+.aboutPopover {
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  margin: 8px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.aboutPopover::before {
+  content: '';
+  border: 8px solid transparent;
+  border-bottom-color: rgba(27, 31, 35, 0.149);
+  position: absolute;
+  top: -16px;
+  left: 25px;
+  display: none;
+}
+
+.aboutPopover::after {
+  content: '';
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+  position: absolute;
+  top: -14px;
+  left: 26px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .aboutPopover {
+    width: 360px;
+    top: 30px;
+    bottom: auto;
+    left: 25px;
+  }
+
+  .aboutPopover::before,
+  .aboutPopover::after {
+    display: block;
+  }
+}

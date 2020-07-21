@@ -3,6 +3,10 @@
   align-items: center;
 }
 
+.repoTitle path {
+  fill: #586069;
+}
+
 .title,
 .subTitle,
 .slash {
@@ -34,6 +38,10 @@
 }
 
 @media (min-width: 768px) {
+  .repoTitle {
+    position: relative;
+  }
+
   .title,
   .subTitle,
   .slash {

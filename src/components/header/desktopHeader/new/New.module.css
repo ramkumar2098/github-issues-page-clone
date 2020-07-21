@@ -1,7 +1,23 @@
-.plus {
+.new {
+  position: relative;
   margin-right: 16px;
 }
 
-.plus:hover span {
-  color: #ffffffb3;
+.plus {
+  display: flex;
+  align-items: center;
+}
+
+.plus > span {
+  margin-top: 3px;
+}
+
+.plus:hover span,
+.plus:focus span {
+  color: rgba(255, 255, 255, 0.702);
+}
+
+.plus:hover path,
+.plus:focus path {
+  fill: rgba(255, 255, 255, 0.702);
 }

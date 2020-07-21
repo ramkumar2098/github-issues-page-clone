@@ -6,7 +6,7 @@ function ProjectsMenuList() {
   return (
     <>
       <ProjectsMenuTabs />
-      <NotFound textContent="projects" />
+      <NotFound menuItem="projects" />
     </>
   );
 }

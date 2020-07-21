@@ -1,0 +1,19 @@
+.gap {
+  color: #6a737d;
+  padding: 5px 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  display: none;
+}
+
+@media (min-width: 544px) {
+  .gap {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .gap {
+    margin-left: 0px;
+  }
+}

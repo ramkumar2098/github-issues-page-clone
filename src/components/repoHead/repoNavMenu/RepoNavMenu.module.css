@@ -43,7 +43,9 @@
   text-decoration: none;
 }
 
-.repoNavMenu > li > a:hover {
+.repoNavMenu > li > a:hover,
+.repoNavMenu > li > a:focus {
+  outline: none;
   background-color: #0366d6;
   color: #fff;
 }

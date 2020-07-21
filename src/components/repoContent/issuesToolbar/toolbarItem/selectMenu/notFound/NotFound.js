@@ -1,9 +1,9 @@
 import React from 'react';
 
-function NotFound({ textContent }) {
+function NotFound({ menuItem }) {
   return (
     <div style={{ padding: '9px', color: '#586069' }}>
-      No {textContent} found. Sorry about that.
+      No {menuItem} found. Sorry about that.
     </div>
   );
 }

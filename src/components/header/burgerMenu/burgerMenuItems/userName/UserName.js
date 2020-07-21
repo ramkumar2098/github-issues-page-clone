@@ -5,7 +5,7 @@ function UserName() {
   return (
     <a href="#">
       <Avatar />
-      ramkumar2098
+      <span style={{ marginLeft: '0.2rem' }}>ramkumar2098</span>
     </a>
   );
 }

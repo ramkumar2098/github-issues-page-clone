@@ -6,42 +6,42 @@ import SortMenuList from '../components/repoContent/issuesToolbar/toolbarItem/se
 
 export const toolbarItems = [
   {
-    textContent: 'Author',
+    toolbarItem: 'Author',
     classNames: ['author', 'authorMenuModal'],
     header: 'Filter by author',
     placeholder: 'users',
     SelectMenuList: UsersMenuList,
   },
   {
-    textContent: 'Label',
+    toolbarItem: 'Label',
     classNames: ['label', 'labelMenuModal'],
     header: 'Filter by label',
     placeholder: 'labels',
     SelectMenuList: LabelMenuList,
   },
   {
-    textContent: 'Projects',
+    toolbarItem: 'Projects',
     classNames: ['projects', 'projectsMenuModal'],
     header: 'Filter by project',
     placeholder: 'projects',
     SelectMenuList: ProjectsMenuList,
   },
   {
-    textContent: 'Milestones',
+    toolbarItem: 'Milestones',
     classNames: ['milestones', 'milestonesMenuModal'],
     header: 'Filter by milestone',
     placeholder: 'milestones',
     SelectMenuList: MilestonesMenuList,
   },
   {
-    textContent: 'Assignee',
+    toolbarItem: 'Assignee',
     classNames: ['assignee', 'assigneeMenuModal'],
     header: 'Filter by who’s assigned',
     placeholder: 'users',
     SelectMenuList: UsersMenuList,
   },
   {
-    textContent: 'Sort',
+    toolbarItem: 'Sort',
     classNames: ['sort', 'sortMenuModal'],
     header: 'Sort by',
     placeholder: 'users',

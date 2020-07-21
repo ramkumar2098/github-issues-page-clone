@@ -7,24 +7,24 @@ import InsightsSVG from 'SVGs/InsightsSVG';
 export const repoNavItems = [
   {
     Icon: ActionsSVG,
-    textContent: 'Actions',
+    repoNavItem: 'Actions',
   },
   {
     Icon: ProjectsSVG,
-    textContent: 'Projects',
+    repoNavItem: 'Projects',
   },
   {
     Icon: WikiSVG,
-    textContent: 'Wiki',
+    repoNavItem: 'Wiki',
   },
 
   {
     Icon: SecuritySVG,
-    textContent: 'Security',
+    repoNavItem: 'Security',
   },
 
   {
     Icon: InsightsSVG,
-    textContent: 'Insights',
+    repoNavItem: 'Insights',
   },
 ];

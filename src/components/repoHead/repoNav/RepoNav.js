@@ -8,7 +8,7 @@ import style from './RepoNav.module.css';
 
 const repoNavItem = {
   Icon: CodeSVG,
-  textContent: 'Code',
+  repoNavItem: 'Code',
 };
 
 function RepoNav({ displayIcon }) {
@@ -19,7 +19,7 @@ function RepoNav({ displayIcon }) {
       <PullRequests displayIcon={displayIcon} />
       {repoNavItems.map(repoNavItem => (
         <RepoNavItem
-          key={repoNavItem.textContent}
+          key={repoNavItem.repoNavItem}
           repoNavItem={repoNavItem}
           displayIcon={displayIcon}
         />

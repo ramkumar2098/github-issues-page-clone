@@ -9,7 +9,7 @@ import style from './RepoHead.module.css';
 function RepoHead() {
   const [displayRepoNavMenu, setDisplayRepoNavMenu] = useState(false);
 
-  const mediaQ = window.matchMedia('(min-width: 540px)');
+  const mediaQ = window.matchMedia('(min-width: 544px)');
   const [displayIcon, setDisplayIcon] = useState(mediaQ.matches);
   mediaQ.onchange = () => setDisplayIcon(mediaQ.matches);
 

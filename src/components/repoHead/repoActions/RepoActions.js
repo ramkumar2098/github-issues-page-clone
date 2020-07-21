@@ -7,7 +7,7 @@ function RepoActions() {
   return (
     <div className={style.repoActions}>
       {repoActions.map(repoAction => (
-        <RepoAction key={repoAction.textContent} repoAction={repoAction} />
+        <RepoAction key={repoAction.action} repoAction={repoAction} />
       ))}
     </div>
   );

@@ -1,15 +1,20 @@
 import React from 'react';
+import Watch from './watch/Watch';
 import style from './RepoAction.module.css';
 
-function RepoAction({ repoAction }) {
-  const { Icon, textContent, count } = repoAction;
+function RepoAction(props) {
+  const { Icon, action, count } = props.repoAction;
 
   return (
     <div className={style.repoAction}>
-      <button className={style.action}>
-        <Icon />
-        <span className={style.textContent}>{textContent}</span>
-      </button>
+      {action === 'Watch' ? (
+        <Watch {...props} />
+      ) : (
+        <button className={style.action}>
+          <Icon />
+          <span className={style.textContent}>{action}</span>
+        </button>
+      )}
       <a href="#" className={style.link}>
         {count}
       </a>

@@ -120,7 +120,7 @@ function IssuesContainer(props) {
       <IssueLabels {...props} />
       <div className={style.issueOpened}>
         <span>
-          {issueNo} opened {issueOpened} by
+          {issueNo} opened {issueOpened} by{' '}
         </span>
         <a
           href="#"
@@ -128,7 +128,6 @@ function IssuesContainer(props) {
           onMouseOver={handleMouseOver2}
           onMouseOut={handleMouseOut2}
         >
-          {' '}
           {userID}
         </a>
         {displayUserPopover && (

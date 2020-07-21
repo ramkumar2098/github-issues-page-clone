@@ -7,7 +7,7 @@ function IssuesToolbar() {
   return (
     <div className={style.issuesToolbar}>
       {toolbarItems.map(toolbarItem => (
-        <ToolbarItem key={toolbarItem.textContent} toolbarItem={toolbarItem} />
+        <ToolbarItem key={toolbarItem.toolbarItem} toolbarItem={toolbarItem} />
       ))}
     </div>
   );

@@ -5,7 +5,7 @@ import Filters from './filters/Filters';
 import style from './RepoInfo.module.css';
 
 function RepoInfo() {
-  const mediaQ = window.matchMedia('(min-width: 770px)');
+  const mediaQ = window.matchMedia('(min-width: 768px)');
   const [displayCount, setDisplayCount] = useState(mediaQ.matches);
   mediaQ.onchange = () => setDisplayCount(mediaQ.matches);
 

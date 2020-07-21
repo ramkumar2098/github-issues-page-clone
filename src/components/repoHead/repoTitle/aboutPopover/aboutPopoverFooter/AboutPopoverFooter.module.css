@@ -1,0 +1,19 @@
+.aboutPopoverFooter {
+  font-size: 12px;
+  color: #586069;
+  padding: 16px;
+  border-top: 1px solid #e1e4e8;
+}
+
+.aboutPopoverFooter > svg {
+  vertical-align: text-bottom;
+}
+
+.aboutPopoverFooter path {
+  fill: #586069;
+}
+
+.aboutPopoverFooter > span {
+  margin-right: 16px;
+  margin-left: 3px;
+}

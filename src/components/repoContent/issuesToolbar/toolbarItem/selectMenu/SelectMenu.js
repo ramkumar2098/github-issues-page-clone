@@ -4,17 +4,17 @@ import SelectMenuFilter from './selectMenuFilter/SelectMenuFilter';
 import style from './SelectMenu.module.css';
 
 function SelectMenu(props) {
-  const { className, textContent, SelectMenuList } = props;
+  const { className, toolbarItem, SelectMenuList } = props;
   const [value, setValue] = useState('');
 
   return (
     <div className={style.selectMenu}>
       <div className={style.selectMenuModal + ' ' + className}>
         <SelectMenuHeader {...props} />
-        {textContent !== 'Sort' && (
+        {toolbarItem !== 'Sort' && (
           <SelectMenuFilter {...props} value={value} setValue={setValue} />
         )}
-        <SelectMenuList textContent={textContent} value={value} />
+        <SelectMenuList toolbarItem={toolbarItem} value={value} />
       </div>
     </div>
   );

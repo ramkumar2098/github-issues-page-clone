@@ -5,6 +5,7 @@
   margin-right: 16px;
 }
 
-.navBarItems > a:hover {
+.navBarItems > a:hover,
+.navBarItems > a:focus {
   color: #ffffffb3;
 }

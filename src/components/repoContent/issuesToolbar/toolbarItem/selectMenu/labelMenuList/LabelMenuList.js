@@ -29,7 +29,7 @@ function LabelMenuList({ value }) {
               labelMenuItem={labelMenuItem}
             />
           ))}
-        {notFound && <NotFound textContent="labels" />}
+        {notFound && <NotFound menuItem="labels" />}
       </div>
       <LabelMenuFooter />
     </>

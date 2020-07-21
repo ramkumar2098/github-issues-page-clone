@@ -1,3 +1,18 @@
-.user:hover span {
-  color: #ffffffb3;
+.user {
+  position: relative;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar:hover span,
+.avatar:focus span {
+  color: rgba(255, 255, 255, 0.702);
+}
+
+.avatar:hover path,
+.avatar:focus path {
+  fill: rgba(255, 255, 255, 0.702);
 }

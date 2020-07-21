@@ -1,0 +1,36 @@
+.watchMenuItem {
+  text-decoration: none;
+  color: #586069;
+  padding: 8px 8px 8px 30px;
+  border-bottom: 1px solid #eaecef;
+  display: flex;
+}
+
+.watchMenuItem:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.watchMenuItem:hover,
+.watchMenuItem:focus,
+.watchMenuItem:hover > div > div,
+.watchMenuItem:focus > div > div {
+  outline: none;
+  background-color: #0366d6;
+  color: #fff !important;
+}
+
+.watchMenuItem > svg {
+  margin-right: 5px;
+  margin-left: -20px;
+}
+
+.watchMenuItem:hover path,
+.watchMenuItem:focus path {
+  fill: #fff;
+}
+
+.watchMenuItem > div > div {
+  font-size: 14px;
+  font-weight: 600;
+}

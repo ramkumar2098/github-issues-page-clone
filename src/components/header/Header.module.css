@@ -7,6 +7,8 @@
 }
 
 .header button:hover path,
-.header a:hover path {
+.header button:focus path,
+.header a:hover path,
+.header a:focus path {
   fill: #ffffffb3;
 }

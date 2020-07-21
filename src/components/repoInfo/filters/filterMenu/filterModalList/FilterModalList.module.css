@@ -4,9 +4,9 @@
   margin: 0;
 }
 
-.modalList:last-child:hover {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+.modalList > li:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .modalList > li > a {

@@ -15,7 +15,9 @@ function UserPopoverBody(props) {
   return (
     <div className={style.userPopoverBody}>
       <div>
-        <img src={avatar} />
+        <a href="#">
+          <img src={avatar} />
+        </a>
         {isPro && <span className={style.pro}>PRO</span>}
       </div>
       <div className={style.userDetails}>

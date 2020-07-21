@@ -5,17 +5,17 @@ import ForkSVG from 'SVGs/ForkSVG';
 export const repoActions = [
   {
     Icon: WatchSVG,
-    textContent: 'Watch',
+    action: 'Watch',
     count: '6.7k',
   },
   {
     Icon: StarSVG,
-    textContent: 'Star',
+    action: 'Star',
     count: '151k',
   },
   {
     Icon: ForkSVG,
-    textContent: 'Fork',
+    action: 'Fork',
     count: '29.5k',
   },
 ];

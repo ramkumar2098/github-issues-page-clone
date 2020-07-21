@@ -1,0 +1,25 @@
+.protip {
+  text-align: center;
+  padding: 0 16px;
+}
+
+.protip > svg {
+  vertical-align: middle;
+}
+
+.protip path {
+  fill: #586069;
+}
+
+.protip > strong {
+  margin-left: 4px;
+}
+
+.protip > a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+.protip > a:hover {
+  text-decoration: underline;
+}

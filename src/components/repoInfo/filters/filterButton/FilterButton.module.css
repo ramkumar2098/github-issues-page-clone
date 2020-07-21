@@ -13,7 +13,7 @@
 }
 
 .filterBtn:hover {
-  background-color: #f3f4f6;
+  background-color: #f3f4f6 !important;
 }
 
 .filterBtn:focus {
@@ -24,4 +24,9 @@
 
 .filterBtn > :first-child {
   margin-right: 3px;
+}
+
+.filterBtn > :last-child {
+  opacity: 0.8;
+  margin-left: 5px;
 }

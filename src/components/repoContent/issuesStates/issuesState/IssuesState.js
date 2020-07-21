@@ -2,12 +2,12 @@ import React from 'react';
 import style from './IssuesState.module.css';
 
 function IssuesState({ issuesState }) {
-  const { className, Icon, textContent } = issuesState;
+  const { className, Icon, state } = issuesState;
 
   return (
     <a href="#" className={style.issuesState + ' ' + style[className]}>
       <Icon />
-      <span>{textContent}</span>
+      <span>{state}</span>
     </a>
   );
 }

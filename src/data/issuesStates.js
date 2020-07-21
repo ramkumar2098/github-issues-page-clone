@@ -5,11 +5,11 @@ export const issuesStates = [
   {
     className: 'issuesOpen',
     Icon: IssuesSVG,
-    textContent: '499 Open',
+    state: '499 Open',
   },
   {
     className: 'issuesClosed',
     Icon: CheckSVG,
-    textContent: '8,804 Closed',
+    state: '8,804 Closed',
   },
 ];
