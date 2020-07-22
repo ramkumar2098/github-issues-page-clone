@@ -2,6 +2,7 @@
   background-color: #24292e;
   padding: 0 1.2rem;
   justify-content: center;
+  position: relative;
 }
 
 .input {
@@ -13,23 +14,31 @@
   border-radius: 0.4rem;
   border-style: none;
   margin-bottom: 16px;
+  transition: 0.2s ease-in-out;
+  transition-property: width;
 }
 
 .input::placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.input:focus {
-  background-color: #fff;
-  color: #24292e;
-}
-
 .input:focus::placeholder {
   color: #586069;
 }
 
+.input:focus {
+  background-color: #fff;
+  color: #24292e;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .input:focus + svg {
   display: none;
+}
+
+.input:focus ~ .dropdown {
+  display: block;
 }
 
 .searchField > svg {
@@ -37,4 +46,31 @@
   right: 1.2rem;
   margin-top: 5px;
   margin-right: 8px;
+}
+
+.dropdown {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  padding: 0 1.2rem;
+  display: none;
+}
+
+.dropdown > div {
+  border: 1px solid #e1e4e8;
+  border-top: 0;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1012px) {
+  .input:focus {
+    width: 470px !important;
+  }
+
+  .dropdown {
+    left: 0;
+    z-index: 1;
+  }
 }
