@@ -9,7 +9,8 @@
   align-items: center;
 }
 
-.infoButton:hover {
+.infoButton:hover,
+.infoButton:focus {
   background-color: #f6f8fa;
 }
 

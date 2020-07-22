@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Overlay from 'components/overlay/Overlay';
 import PlusSVG from 'SVGs/PlusSVG';
 import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
 import NewMenu from './newMenu/NewMenu';
@@ -17,17 +18,20 @@ function New() {
   }, []);
 
   return (
-    <div className={style.new + ' new'}>
-      <a
-        href="#"
-        onClick={() => setDisplayNewMenu(!displayNewMenu)}
-        className={style.plus}
-      >
-        <PlusSVG />
-        <DropdownCaret />
-      </a>
-      {displayNewMenu && <NewMenu />}
-    </div>
+    <>
+      {displayNewMenu && <Overlay />}
+      <div className={style.new + ' new'}>
+        <a
+          href="#"
+          onClick={() => setDisplayNewMenu(!displayNewMenu)}
+          className={style.plus}
+        >
+          <PlusSVG />
+          <DropdownCaret />
+        </a>
+        {displayNewMenu && <NewMenu />}
+      </div>
+    </>
   );
 }
 

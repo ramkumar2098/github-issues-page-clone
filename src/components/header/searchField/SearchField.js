@@ -1,4 +1,5 @@
 import React from 'react';
+import SlashSVG from 'SVGs/SlashSVG';
 import style from './SearchField.module.css';
 
 function SearchField({ styles, searchQuery, setSearchQuery }) {
@@ -11,16 +12,6 @@ function SearchField({ styles, searchQuery, setSearchQuery }) {
     marginBottom: styles.marginBottom,
   };
 
-  const handleFocus = e => {
-    e.target.classList.remove(style.blur);
-    e.target.classList.add(style.focus);
-  };
-
-  const handleBlur = e => {
-    e.target.classList.remove(style.focus);
-    e.target.classList.add(style.blur);
-  };
-
   return (
     <span className={style.searchField} style={searchField}>
       <input
@@ -28,11 +19,10 @@ function SearchField({ styles, searchQuery, setSearchQuery }) {
         value={searchQuery}
         placeholder="Search or jump to..."
         onChange={e => setSearchQuery(e.target.value)}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        className={`${style.input} ${style.blur}`}
+        className={style.input}
         style={input}
       />
+      <SlashSVG />
     </span>
   );
 }

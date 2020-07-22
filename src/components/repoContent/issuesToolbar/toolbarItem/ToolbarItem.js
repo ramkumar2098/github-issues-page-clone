@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import Overlay from 'components/overlay/Overlay';
 import ToolbarItemName from './toolbarItemName/ToolbarItemName';
 import SelectMenu from './selectMenu/SelectMenu';
 import style from './ToolbarItem.module.css';
@@ -27,26 +28,38 @@ function ToolbarItem({ toolbarItem: props }) {
     });
   }, []);
 
+  const toolbarItemRef = useRef();
+
+  useEffect(() => {
+    displayMenu
+      ? (toolbarItemRef.current.style.color = '#24292e')
+      : (toolbarItemRef.current.style.color = '#586069');
+  }, [displayMenu]);
+
   return (
-    <div style={{ padding: '0 16px' }}>
-      <a
-        href="#"
-        onClick={e =>
-          !e.target.matches(`.${selectMenuModal}, .${selectMenuModal} *`) &&
-          setDisplayMenu(!displayMenu)
-        }
-        className={`${style.toolbarItem} ${toolbarItem}`}
-      >
-        <ToolbarItemName {...props} />
-        {displayMenu && (
-          <SelectMenu
-            {...props}
-            className={selectMenuModal}
-            closeMenu={closeMenu}
-          />
-        )}
-      </a>
-    </div>
+    <>
+      {displayMenu && <Overlay />}
+      <div style={{ padding: '0 16px' }}>
+        <a
+          ref={toolbarItemRef}
+          href="#"
+          onClick={e =>
+            !e.target.matches(`.${selectMenuModal}, .${selectMenuModal} *`) &&
+            setDisplayMenu(!displayMenu)
+          }
+          className={`${style.toolbarItem} ${toolbarItem}`}
+        >
+          <ToolbarItemName {...props} />
+          {displayMenu && (
+            <SelectMenu
+              {...props}
+              className={selectMenuModal}
+              closeMenu={closeMenu}
+            />
+          )}
+        </a>
+      </div>
+    </>
   );
 }
 

@@ -34,6 +34,7 @@ function RepoHead() {
       <div>
         <RepoNav displayIcon={displayIcon} />
         <RepoNavMenuButton
+          displayRepoNavMenu={displayRepoNavMenu}
           toggleRepoNavMenu={() => setDisplayRepoNavMenu(!displayRepoNavMenu)}
         />
       </div>

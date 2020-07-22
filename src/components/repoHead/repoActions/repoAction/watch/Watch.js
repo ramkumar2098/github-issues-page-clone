@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Overlay from 'components/overlay/Overlay';
 import DropdownCaret from '../../../../dropdownCaret/DropdownCaret';
 import WatchMenu from './watchMenu/WatchMenu';
 import style from '../RepoAction.module.css';
@@ -29,13 +30,12 @@ function Watch({ repoAction }) {
 
   return (
     <>
-      {dislayWatchMenu && <div style={overlay}></div>}
+      {dislayWatchMenu && <Overlay />}
       <button
         ref={actionBtnRef}
         onClick={() => setDislayWatchMenu(!dislayWatchMenu)}
         onMouseDown={e => e.preventDefault()}
         className={style.action + ' action'}
-        style={{ zIndex: 1 }}
       >
         <Icon />
         <span className={style.textContent}>{action}</span>
@@ -47,12 +47,3 @@ function Watch({ repoAction }) {
 }
 
 export default Watch;
-
-const overlay = {
-  position: 'fixed',
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  zIndex: 1,
-};

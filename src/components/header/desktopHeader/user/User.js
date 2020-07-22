@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Overlay from 'components/overlay/Overlay';
 import Avatar from '../../avatar/Avatar';
 import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
 import UserMenu from './userMenu/UserMenu';
@@ -17,17 +18,20 @@ function User() {
   }, []);
 
   return (
-    <div className={style.user + ' user'}>
-      <a
-        href="#"
-        onClick={() => setDisplayUserMenu(!displayUserMenu)}
-        className={style.avatar}
-      >
-        <Avatar />
-        <DropdownCaret />
-      </a>
-      {displayUserMenu && <UserMenu />}
-    </div>
+    <>
+      {displayUserMenu && <Overlay />}
+      <div className={style.user + ' user'}>
+        <a
+          href="#"
+          onClick={() => setDisplayUserMenu(!displayUserMenu)}
+          className={style.avatar}
+        >
+          <Avatar />
+          <DropdownCaret />
+        </a>
+        {displayUserMenu && <UserMenu />}
+      </div>
+    </>
   );
 }
 

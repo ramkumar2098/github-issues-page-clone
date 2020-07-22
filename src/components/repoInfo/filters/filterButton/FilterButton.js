@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import Overlay from 'components/overlay/Overlay';
 import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
 import style from './FilterButton.module.css';
 
@@ -12,15 +13,18 @@ function FilterButton({ displayModal, toggleModal }) {
   }, [displayModal]);
 
   return (
-    <button
-      ref={filterBtnRef}
-      onClick={toggleModal}
-      onMouseDown={e => e.preventDefault()}
-      className={style.filterBtn + ' filterBtn'}
-    >
-      <span>Filters</span>
-      <DropdownCaret color="#444d56" />
-    </button>
+    <>
+      {displayModal && <Overlay />}
+      <button
+        ref={filterBtnRef}
+        onClick={toggleModal}
+        onMouseDown={e => e.preventDefault()}
+        className={style.filterBtn + ' filterBtn'}
+      >
+        <span>Filters</span>
+        <DropdownCaret color="#444d56" />
+      </button>
+    </>
   );
 }
 
