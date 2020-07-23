@@ -1,0 +1,35 @@
+.dropdown {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  padding: 0 1.2rem;
+  display: none;
+}
+
+.dropdown > div {
+  border: 1px solid #e1e4e8;
+  border-top: 0;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  background-color: #0366d6;
+  color: #fff;
+}
+
+.highlight path {
+  fill: #fff !important;
+}
+
+.highlight > span:last-child {
+  display: block !important;
+}
+
+@media (min-width: 1012px) {
+  .dropdown {
+    left: 0;
+    z-index: 1;
+  }
+}

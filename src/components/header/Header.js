@@ -5,7 +5,7 @@ import BurgerMenu from './burgerMenu/BurgerMenu';
 import style from './Header.module.css';
 
 function Header() {
-  const [displayBurgerMenu, setDisplayBurgerMenu] = useState(true);
+  const [displayBurgerMenu, setDisplayBurgerMenu] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const mediaQ = window.matchMedia('(min-width: 1012px)');
