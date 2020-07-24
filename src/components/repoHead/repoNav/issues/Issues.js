@@ -1,5 +1,6 @@
 import React from 'react';
 import IssuesSVG from 'SVGs/IssuesSVG';
+import { issuesCount } from 'data/issuesCount';
 import style from '../repoNavItem/RepoNavItem.module.css';
 
 function Issues({ displayIcon }) {
@@ -15,7 +16,9 @@ function Issues({ displayIcon }) {
         >
           Issues
         </span>
-        <span className={style.count}>510</span>
+        <span title={issuesCount} className={style.count}>
+          {issuesCount}
+        </span>
       </a>
     </div>
   );

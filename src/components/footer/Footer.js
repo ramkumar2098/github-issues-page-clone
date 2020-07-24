@@ -14,7 +14,7 @@ function Footer() {
             <FooterItem key={footerItem} footerItem={footerItem} />
           ))}
         </div>
-        <GithubLogo />
+        <GithubLogo title="GitHub" />
         <div className={style.footer}>
           {footerItems2.map(footerItem => (
             <FooterItem key={footerItem} footerItem={footerItem} />

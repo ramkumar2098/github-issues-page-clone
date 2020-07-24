@@ -39,14 +39,15 @@ function ToolbarItem({ toolbarItem: props }) {
   return (
     <>
       {displayMenu && <Overlay />}
-      <div style={{ padding: '0 16px' }}>
+      <span style={{ padding: '0 16px' }}>
         <a
-          ref={toolbarItemRef}
           href="#"
+          ref={toolbarItemRef}
           onClick={e =>
             !e.target.matches(`.${selectMenuModal}, .${selectMenuModal} *`) &&
             setDisplayMenu(!displayMenu)
           }
+          title={props.toolbarItem}
           className={`${style.toolbarItem} ${toolbarItem}`}
         >
           <ToolbarItemName {...props} />
@@ -58,7 +59,7 @@ function ToolbarItem({ toolbarItem: props }) {
             />
           )}
         </a>
-      </div>
+      </span>
     </>
   );
 }

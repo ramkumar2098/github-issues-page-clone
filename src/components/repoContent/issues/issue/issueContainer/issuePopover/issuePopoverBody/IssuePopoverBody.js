@@ -15,6 +15,7 @@ function IssuePopoverBody(props) {
         <IssueLabels
           {...props}
           styles={{
+            cursor: 'text',
             maxWidth: '135px',
             overflow: 'hidden',
             textOverflow: 'ellipsis',

@@ -12,7 +12,11 @@ function RepoInfoButton({
     <a href="#" className={style.infoButton + ' ' + className}>
       <Icon />
       <span style={{ marginLeft: '3px' }}>{repoInfoButton}</span>
-      {displayCount && <span className={style.count}>{count}</span>}
+      {displayCount && (
+        <span title={count} className={style.count}>
+          {count}
+        </span>
+      )}
     </a>
   );
 }

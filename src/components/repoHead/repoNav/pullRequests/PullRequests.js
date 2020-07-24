@@ -1,5 +1,6 @@
 import React from 'react';
 import PullRequestsSVG from 'SVGs/PullRequestsSVG';
+import { pullRequestsCount } from 'data/pullRequestsCount';
 import style from '../repoNavItem/RepoNavItem.module.css';
 
 function PullRequests({ displayIcon }) {
@@ -10,7 +11,9 @@ function PullRequests({ displayIcon }) {
         <span style={(() => (displayIcon ? { marginLeft: '8px' } : null))()}>
           Pull requests
         </span>
-        <span className={style.count}>132</span>
+        <span title={pullRequestsCount} className={style.count}>
+          {pullRequestsCount}
+        </span>
       </a>
     </div>
   );

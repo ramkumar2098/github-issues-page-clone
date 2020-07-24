@@ -22,16 +22,18 @@ function DropdownItem({
         className={style.dropdownItem + ' dropdownItem'}
       >
         <Icon />
-        <span className={style.searchQuery}>
-          {badge === 'Jump to' ? 'facebook/react' : searchQuery}
-        </span>
-        <span
-          className={style.badge}
-          style={(() => (badge === 'Jump to' ? { display: 'none' } : null))()}
-        >
-          <span>{badge}</span>
-          <span>↵</span>
-        </span>
+        <div>
+          <div className={style.searchQuery}>
+            {badge === 'Jump to' ? 'facebook/react' : searchQuery}
+          </div>
+          <div
+            className={style.badge}
+            style={(() => (badge === 'Jump to' ? { display: 'none' } : null))()}
+          >
+            <span>{badge}</span>
+            <span>↵</span>
+          </div>
+        </div>
       </a>
     )
   );

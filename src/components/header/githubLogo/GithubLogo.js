@@ -3,7 +3,7 @@ import GithubLogoSVG from 'SVGs/GithubLogoSVG';
 
 function GithubLogo() {
   return (
-    <a href="#" style={{ zIndex: 1 }}>
+    <a href="#">
       <GithubLogoSVG />
     </a>
   );

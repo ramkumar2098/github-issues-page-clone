@@ -5,7 +5,7 @@ import UserPopover from './userPopover/UserPopover';
 import style from './IssueContainer.module.css';
 
 function IssuesContainer(props) {
-  const { issueTitle, issueNo, issueOpened, userID } = props.issue;
+  const { issueTitle, issueNo, issueOpened, dateTime, userID } = props.issue;
 
   const [bottom, setBottom] = useState(null);
   const [issuePopoverLeft, setIssuePopoverLeft] = useState(null);
@@ -117,14 +117,15 @@ function IssuesContainer(props) {
           closeIssuePopover={() => setDisplayIssuePopover(false)}
         />
       )}
-      <IssueLabels {...props} />
+      <IssueLabels {...props} displayTitle={true} />
       <div className={style.issueOpened}>
-        <span>
-          {issueNo} opened {issueOpened} by{' '}
-        </span>
+        <span>{issueNo} opened </span>
+        <span title={dateTime}>{issueOpened}</span>
+        <span> by </span>
         <a
           href="#"
           ref={userIDRef}
+          title={'Open issues created by ' + userID}
           onMouseOver={handleMouseOver2}
           onMouseOut={handleMouseOut2}
         >

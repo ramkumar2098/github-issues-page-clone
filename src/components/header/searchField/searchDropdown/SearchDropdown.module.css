@@ -23,7 +23,7 @@
   fill: #fff !important;
 }
 
-.highlight > span:last-child {
+.highlight > div > div:last-child {
   display: block !important;
 }
 

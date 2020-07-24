@@ -1,10 +1,11 @@
 .dropdownItem {
-  display: block;
+  height: 45px;
   text-decoration: none;
   background-color: #fff;
   color: #24292e;
   padding: 11px 9px 11px 13px;
   border-top: 1px solid #e1e4e8;
+  display: flex;
 }
 
 .dropdownItem:last-child {
@@ -19,6 +20,8 @@
 
 .dropdownItem > svg {
   vertical-align: middle;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .dropdownItem path {
@@ -29,18 +32,26 @@
   fill: #fff !important;
 }
 
+.dropdownItem > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .searchQuery {
   margin-left: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .badge {
-  float: right;
   font-size: 12px;
   background-color: #f6f8fa;
   color: #6a737d;
   padding: 2px 4px 1px 5px;
   border: 1px solid #e1e4e8;
   border-radius: 6px;
+  white-space: nowrap;
 }
 
 .dropdownItem:hover > .badge {

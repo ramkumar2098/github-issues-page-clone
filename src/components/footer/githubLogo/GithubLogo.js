@@ -2,9 +2,9 @@ import React from 'react';
 import GithubLogoSVG from 'SVGs/GithubLogoSVG';
 import style from './GithubLogo.module.css';
 
-function GithubLogo() {
+function GithubLogo({ title }) {
   return (
-    <a href="#" className={style.githubLogo}>
+    <a href="#" title={title} className={style.githubLogo}>
       <GithubLogoSVG />
     </a>
   );

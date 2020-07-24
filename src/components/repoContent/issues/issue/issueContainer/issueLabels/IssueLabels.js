@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './IssueLabels.module.css';
 
-function IssueLabels({ issue, styles }) {
+function IssueLabels({ issue, displayTitle, styles }) {
   const { issueLabels } = issue;
 
   return (
@@ -10,6 +10,14 @@ function IssueLabels({ issue, styles }) {
         <a
           href="#"
           key={issueLabel}
+          title={
+            (displayTitle && issueLabel === 'Status: Unconfirmed') ||
+            (!displayTitle && issueLabel === 'Status: Unconfirmed')
+              ? "A potential issue that we haven't yet confirmed as a bug"
+              : displayTitle
+              ? issueLabel
+              : null
+          }
           className={style.issueLabel}
           style={{ ...issueLabelStyle(issueLabel), ...styles }}
         >
