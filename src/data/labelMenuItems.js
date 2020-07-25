@@ -1,3 +1,5 @@
+import heart from 'images/2764.png';
+
 export const labelMenuItems = [
   {
     label: 'Unlabeled',
@@ -47,6 +49,10 @@ export const labelMenuItems = [
     label: 'Component: Fast Refresh',
   },
   {
+    backgroundColor: '#c4523e',
+    label: 'Component: Flight',
+  },
+  {
     backgroundColor: '#c2f27b',
     label: 'Component: Hooks',
   },
@@ -77,5 +83,165 @@ export const labelMenuItems = [
   {
     backgroundColor: '#8ffcd6',
     label: 'Component: Suspense',
+  },
+  {
+    backgroundColor: '#006b75',
+    label: 'Component: Test Renderer',
+  },
+  {
+    backgroundColor: '#eb6420',
+    label: 'Component: Test Utils',
+  },
+  {
+    backgroundColor: '#0366d6',
+    label: 'dependencies',
+    description: 'Pull requests that update a dependency file',
+  },
+  {
+    backgroundColor: '#f2687c',
+    label: 'Difficulty: challenging',
+  },
+  {
+    backgroundColor: '#fbca04',
+    label: 'Difficulty: medium',
+  },
+  {
+    backgroundColor: '#94ce52',
+    label: 'Difficulty: starter',
+  },
+  {
+    backgroundColor: '#b60205',
+    label: 'good first issue (taken)',
+  },
+  {
+    backgroundColor: '#6ce26a',
+    label: 'good first issue',
+  },
+  {
+    backgroundColor: '#f7c6c7',
+    label: 'HTML',
+  },
+  {
+    backgroundColor: '#1EBBEE',
+    label: 'Needs Browser Testing',
+    description:
+      'Marks PRs that need to be run through manual browser testing before merging',
+  },
+  {
+    backgroundColor: '#e4bef7',
+    label: 'Partner',
+  },
+  {
+    backgroundColor: '#9149d1',
+    label: 'React Core Team',
+    description: 'Opened by a member of the React Core Team',
+  },
+  {
+    backgroundColor: '#9dd1e8',
+    label: 'Resolution: Backlog',
+  },
+  {
+    backgroundColor: '#cccccc',
+    label: 'Resolution: Duplicate',
+  },
+  {
+    backgroundColor: '#8c98d8',
+    label: 'Resolution: Expected Behavior',
+  },
+  {
+    backgroundColor: '#e6e6e6',
+    label: 'Resolution: Invalid',
+  },
+  {
+    backgroundColor: '#fffde7',
+    label: 'Resolution: Needs More Information',
+  },
+  {
+    backgroundColor: '#e6e6e6',
+    label: 'Resolution: Stale',
+    description: 'Automatically closed due to inactivity',
+  },
+  {
+    backgroundColor: '#106099',
+    label: 'Resolution: Support Redirect',
+  },
+  {
+    backgroundColor: '#fef2c0',
+    label: 'Resolution: Unsolved',
+  },
+  {
+    backgroundColor: '#ffffff',
+    label: 'Resolution: Wontfix',
+  },
+  {
+    backgroundColor: '#006b75',
+    label: 'Status: New',
+  },
+  {
+    backgroundColor: '#d93f0b',
+    label: 'Status: Reverted',
+  },
+  {
+    backgroundColor: '#d4c5f9',
+    label: 'Status: Unconfirmed',
+    description: "A potential issue that we haven't yet confirmed as a bug",
+  },
+  {
+    backgroundColor: '#f7c6c7',
+    label: 'SVG',
+  },
+  {
+    backgroundColor: '#61dafb',
+    label: 'Type: Big Picture',
+  },
+  {
+    backgroundColor: '#aa2608',
+    label: 'Type: Breaking Change',
+  },
+  {
+    backgroundColor: '#b60205',
+    color: '#fff',
+    label: 'Type: Bug',
+  },
+  {
+    backgroundColor: '#fef2c0',
+    label: 'Type: Discussion',
+  },
+  {
+    backgroundColor: '#84b6eb',
+    label: 'Type: Enhancement',
+  },
+  {
+    backgroundColor: '#c7def8',
+    label: 'Type: Feature Request',
+  },
+  {
+    backgroundColor: '#fbca04',
+    label: 'Type: Needs Investigation',
+  },
+  {
+    backgroundColor: '#cc317c',
+    label: 'Type: Question',
+  },
+  {
+    backgroundColor: '#e11d21',
+    label: 'Type: Regression',
+  },
+  {
+    backgroundColor: '#00D8EA',
+    label: 'Type: Release',
+  },
+  {
+    backgroundColor: '#96123b',
+    label: 'Type: Security',
+  },
+  {
+    backgroundColor: '#5319e7',
+    label: 'Type: Umbrella',
+  },
+  {
+    backgroundColor: '#ffffff',
+    label: '',
+    img: heart,
   },
 ];

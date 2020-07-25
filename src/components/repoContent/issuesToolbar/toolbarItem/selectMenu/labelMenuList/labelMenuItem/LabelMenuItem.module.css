@@ -8,12 +8,27 @@
   height: 1em;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 2em;
+  margin-top: 1px;
   margin-right: 8px;
   font-size: 14px;
   flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .label {
   font-weight: 600;
   color: #24292e;
+}
+
+.description {
+  color: #586069;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.img {
+  width: 1em;
+  height: 1em;
+  font-size: 12px;
 }

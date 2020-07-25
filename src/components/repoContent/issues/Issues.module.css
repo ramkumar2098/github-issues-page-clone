@@ -1,6 +1,12 @@
 .issues {
-  border: 1px solid #e1e4e8;
-  border-top: 0;
+  border-bottom: 1px solid #e1e4e8;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+}
+
+@media (min-width: 544px) {
+  .issues {
+    border: 1px solid #e1e4e8;
+    border-top: 0;
+  }
 }

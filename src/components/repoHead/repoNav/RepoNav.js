@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import CodeSVG from 'SVGs/CodeSVG';
 import Issues from './issues/Issues';
 import PullRequests from './pullRequests/PullRequests';
@@ -12,14 +12,21 @@ const repoNavItem = {
 };
 
 function RepoNav({ displayIcon }) {
+  const navItemsRef = useRef([]);
+
+  useEffect(() => {
+    console.log(navItemsRef.current);
+  });
+
   return (
     <div className={style.repoNav}>
       <RepoNavItem repoNavItem={repoNavItem} displayIcon={displayIcon} />
       <Issues displayIcon={displayIcon} />
       <PullRequests displayIcon={displayIcon} />
-      {repoNavItems.map(repoNavItem => (
+      {repoNavItems.map((repoNavItem, i) => (
         <RepoNavItem
           key={repoNavItem.repoNavItem}
+          navItemRef={navItem => (navItemsRef.current[i] = navItem)}
           repoNavItem={repoNavItem}
           displayIcon={displayIcon}
         />

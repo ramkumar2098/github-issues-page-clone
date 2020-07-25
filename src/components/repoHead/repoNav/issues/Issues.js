@@ -5,7 +5,7 @@ import style from '../repoNavItem/RepoNavItem.module.css';
 
 function Issues({ displayIcon }) {
   return (
-    <div className={style.repoNavItem}>
+    <div className={style.repoNavItem + ' repoNavItem'}>
       <a href="#" className={style.issues}>
         {displayIcon && <IssuesSVG />}
         <span

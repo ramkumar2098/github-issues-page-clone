@@ -5,7 +5,7 @@ import style from '../repoNavItem/RepoNavItem.module.css';
 
 function PullRequests({ displayIcon }) {
   return (
-    <div className={style.repoNavItem}>
+    <div className={style.repoNavItem + ' repoNavItem'}>
       <a href="#" className={style.navLink}>
         {displayIcon && <PullRequestsSVG />}
         <span style={(() => (displayIcon ? { marginLeft: '8px' } : null))()}>
