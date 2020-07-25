@@ -2,7 +2,7 @@
   padding: 8px 16px;
 }
 
-@media (min-width: 980px) {
+@media (min-width: 1030.5px) {
   .menuButton {
     visibility: hidden;
   }

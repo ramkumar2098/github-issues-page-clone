@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import RepoTitle from './repoTitle/RepoTitle';
 import RepoActions from './repoActions/RepoActions';
 import RepoNav from './repoNav/RepoNav';
@@ -25,6 +25,8 @@ function RepoHead() {
     });
   }, []);
 
+  const navButtonRef = useRef();
+
   return (
     <div className={style.repoHead}>
       <div style={{ marginBottom: '16px' }}>
@@ -32,8 +34,9 @@ function RepoHead() {
         <RepoActions />
       </div>
       <div>
-        <RepoNav displayIcon={displayIcon} />
+        <RepoNav navButtonRef={navButtonRef} displayIcon={displayIcon} />
         <RepoNavMenuButton
+          navButtonRef={navButtonRef}
           displayRepoNavMenu={displayRepoNavMenu}
           toggleRepoNavMenu={() => setDisplayRepoNavMenu(!displayRepoNavMenu)}
         />

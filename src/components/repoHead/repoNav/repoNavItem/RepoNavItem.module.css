@@ -3,13 +3,13 @@
 }
 
 .navLink {
-  color: #1b1f23;
   text-decoration: none;
-  padding: 8px 16px;
+  color: #1b1f23;
   line-height: 30px;
+  padding: 8px 16px;
+  border-bottom: 2px solid #d1d5da00;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #d1d5da00;
   transition: border-bottom-color 0.36s ease-in;
 }
 
@@ -21,17 +21,16 @@
 }
 
 .issues {
-  text-decoration: none;
-  color: #24292e;
-  line-height: 30px;
-  border-bottom: 1.5px solid #f9826c;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
+  font-weight: 600;
+  border-bottom-color: #f9826c;
+  outline-offset: -1px;
+  outline: transparent dotted 1px;
 }
 
+.issues:hover,
 .issues:focus {
   outline: none;
+  border-bottom-color: #f9826c;
 }
 
 .count {
