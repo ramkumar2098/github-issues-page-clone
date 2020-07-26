@@ -2,9 +2,9 @@ import React from 'react';
 import style from './DropdownItem.module.css';
 
 function DropdownItem({
+  dropdownItemsRef,
   dropdownItem,
   searchQuery,
-  jumpToRef,
   removeHighlight,
   addHighlight,
 }) {
@@ -16,7 +16,7 @@ function DropdownItem({
       (badge !== 'Jump to' && searchQuery.trim())) && (
       <a
         href="#"
-        ref={badge === 'Jump to' ? jumpToRef : null}
+        ref={dropdownItemsRef}
         onMouseOver={removeHighlight}
         onMouseOut={addHighlight}
         className={style.dropdownItem + ' dropdownItem'}

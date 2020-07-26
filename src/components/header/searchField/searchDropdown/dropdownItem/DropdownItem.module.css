@@ -54,7 +54,7 @@
   white-space: nowrap;
 }
 
-.dropdownItem:hover > .badge {
+.dropdownItem:hover > div > .badge {
   display: block !important;
 }
 

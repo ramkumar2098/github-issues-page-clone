@@ -5,14 +5,13 @@ import style from './SearchDropdown.module.css';
 
 function SearchDropdown({ inputRef, searchQuery }) {
   const [mouseOverDropdown, setMouseOverDropdown] = useState(false);
-
-  const jumpToRef = useRef();
+  const dropdownItemsRef = useRef([]);
 
   useEffect(() => {
     if (!mouseOverDropdown && searchQuery.trim()) {
-      const dropdownItems = document.querySelectorAll('.dropdownItem');
+      const dropdownItems = dropdownItemsRef.current;
       dropdownItems.forEach(dropdownItem =>
-        dropdownItem.classList.remove(style.highlight)
+        dropdownItem?.classList.remove(style.highlight)
       );
 
       dropdownItems[0].classList.add(style.highlight);
@@ -22,13 +21,16 @@ function SearchDropdown({ inputRef, searchQuery }) {
   useEffect(() => {
     inputRef.current.addEventListener('keyup', e => {
       if (e.keyCode === 40 || e.keyCode === 38) {
-        const dropdownItems = [...document.querySelectorAll('.dropdownItem')];
-        const highlightedElement = dropdownItems.filter(dropdownItem =>
+        const dropdownItems = dropdownItemsRef.current.filter(
+          dropdownItem => dropdownItem
+        );
+
+        const [highlightedElement] = dropdownItems.filter(dropdownItem =>
           dropdownItem.classList.contains(style.highlight)
         );
 
         const indexOfHighlightedElement = dropdownItems.indexOf(
-          highlightedElement[0]
+          highlightedElement
         );
 
         const highlight = index => {
@@ -60,16 +62,17 @@ function SearchDropdown({ inputRef, searchQuery }) {
         onMouseOver={() => setMouseOverDropdown(true)}
         onMouseOut={() => setMouseOverDropdown(false)}
       >
-        {searchDropdownItems.map(dropdownItem => (
+        {searchDropdownItems.map((dropdownItem, i) => (
           <DropdownItem
             key={dropdownItem.badge}
+            dropdownItemsRef={dropdownItem =>
+              (dropdownItemsRef.current[i] = dropdownItem)
+            }
             dropdownItem={dropdownItem}
             searchQuery={searchQuery}
-            jumpToRef={jumpToRef}
             removeHighlight={() => {
-              const dropdownItems = document.querySelectorAll('.dropdownItem');
-              dropdownItems.forEach(dropdownItem =>
-                dropdownItem.classList.remove(style.highlight)
+              dropdownItemsRef.current.forEach(dropdownItem =>
+                dropdownItem?.classList.remove(style.highlight)
               );
             }}
             addHighlight={e => e.currentTarget.classList.add(style.highlight)}
