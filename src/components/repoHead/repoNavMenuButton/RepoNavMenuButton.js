@@ -5,6 +5,7 @@ import style from './RepoNavMenuButton.module.css';
 
 function RepoNavMenuButton({
   navButtonRef,
+  menuRef,
   displayRepoNavMenu,
   toggleRepoNavMenu,
 }) {
@@ -14,7 +15,12 @@ function RepoNavMenuButton({
       <a
         href="#"
         ref={navButtonRef}
-        onClick={toggleRepoNavMenu}
+        onClick={() => {
+          toggleRepoNavMenu();
+          menuRef.current.style.display === 'none'
+            ? (menuRef.current.style.display = 'block')
+            : (menuRef.current.style.display = 'none');
+        }}
         className={style.menuButton + ' menuButton'}
       >
         <HorizontalKebabSVG />

@@ -3,22 +3,20 @@ import RepoNavMenuItem from './repoNavMenuItem/RepoNavMenuItem';
 import { repoNavMenuItems } from 'data/repoNavMenuItems';
 import style from './RepoNavMenu.module.css';
 
-function RepoNavMenu({ displayIcon }) {
+function RepoNavMenu({ menuRef, menuItemsRef }) {
   return (
-    <ul className={style.repoNavMenu + ' repoNavMenu'}>
-      {repoNavMenuItems.map((repoNavMenuItem, index) =>
-        displayIcon ? (
-          <RepoNavMenuItem
-            key={repoNavMenuItem}
-            repoNavMenuItem={repoNavMenuItem}
-          />
-        ) : index > 3 ? (
-          <RepoNavMenuItem
-            key={repoNavMenuItem}
-            repoNavMenuItem={repoNavMenuItem}
-          />
-        ) : null
-      )}
+    <ul
+      ref={menuRef}
+      className={style.repoNavMenu + ' repoNavMenu'}
+      style={{ display: 'none' }}
+    >
+      {repoNavMenuItems.map((repoNavMenuItem, i) => (
+        <RepoNavMenuItem
+          key={repoNavMenuItem}
+          menuItemRef={menuItem => (menuItemsRef.current[i] = menuItem)}
+          repoNavMenuItem={repoNavMenuItem}
+        />
+      ))}
     </ul>
   );
 }

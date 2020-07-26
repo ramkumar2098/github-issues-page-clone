@@ -50,9 +50,10 @@
   color: #fff;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 768px) {
   .repoNavMenu {
     padding: 4px 0;
+    right: 24px;
   }
 
   .repoNavMenu > li > a {
@@ -60,14 +61,8 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1012px) {
   .repoNavMenu {
-    right: 24px;
-  }
-}
-
-@media (min-width: 980px) {
-  .repoNavMenu {
-    display: none;
+    right: 32px;
   }
 }

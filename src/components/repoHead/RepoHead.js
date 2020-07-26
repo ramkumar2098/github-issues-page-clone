@@ -20,28 +20,90 @@ function RepoHead() {
           '.menuButton, .menuButton *, .repoNavMenu, .repoNavMenu *'
         ) ||
           e.keyCode === 27) &&
+          (menuRef.current.style.display = 'none') &&
           setDisplayRepoNavMenu(false);
       });
     });
   }, []);
 
   const navButtonRef = useRef();
+  const navItemsRef = useRef([]);
+  const menuRef = useRef();
+  const menuItemsRef = useRef([]);
+  const navItemsRightRef = useRef([]);
+  const innerWidthLesserThan544pxRef = useRef();
+
+  const navItems = navItemsRef.current;
+
+  useEffect(() => {
+    navItems.forEach(navItem => {
+      const navItemRight = navItem.getBoundingClientRect().right;
+      navItemsRightRef.current.push(navItemRight);
+    });
+
+    innerWidthLesserThan544pxRef.current = window.innerWidth < 544;
+    resize();
+  }, []);
+
+  const resize = () => {
+    const navItemsRight =
+      (innerWidthLesserThan544pxRef.current && window.innerWidth < 544) ||
+      (!innerWidthLesserThan544pxRef.current && window.innerWidth > 544)
+        ? navItemsRightRef.current
+        : innerWidthLesserThan544pxRef.current && window.innerWidth > 544
+        ? navItemsRightRef.current.map(
+            (navItemRight, i) => navItemRight + 24 * (i + 1)
+          )
+        : navItemsRightRef.current.map(
+            (navItemRight, i) => navItemRight - 24 * (i + 1)
+          );
+
+    const navBtnLeft = navButtonRef.current.getBoundingClientRect().left;
+    const menuItems = menuItemsRef.current;
+
+    navItems.forEach((navItem, i) => {
+      if (navItemsRight[i] > navBtnLeft) {
+        navItem.style.display = 'none';
+        menuItems[i].style.display = 'block';
+        navButtonRef.current.style.visibility = 'visible';
+        menuRef.current.style.visibility = 'visible';
+      } else {
+        navItem.style.display = 'block';
+        menuItems[i].style.display = 'none';
+        navButtonRef.current.style.visibility = 'hidden';
+        menuRef.current.style.visibility = 'hidden';
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', resize);
+  }, []);
 
   return (
     <div className={style.repoHead}>
-      <div style={{ marginBottom: '16px' }}>
+      <div>
         <RepoTitle />
         <RepoActions />
       </div>
       <div>
-        <RepoNav navButtonRef={navButtonRef} displayIcon={displayIcon} />
+        <RepoNav
+          navItemsRef={navItemsRef}
+          navButtonRef={navButtonRef}
+          displayIcon={displayIcon}
+        />
         <RepoNavMenuButton
           navButtonRef={navButtonRef}
+          menuRef={menuRef}
           displayRepoNavMenu={displayRepoNavMenu}
           toggleRepoNavMenu={() => setDisplayRepoNavMenu(!displayRepoNavMenu)}
         />
       </div>
-      {displayRepoNavMenu && <RepoNavMenu displayIcon={displayIcon} />}
+      <RepoNavMenu
+        menuRef={menuRef}
+        menuItemsRef={menuItemsRef}
+        displayIcon={displayIcon}
+      />
     </div>
   );
 }

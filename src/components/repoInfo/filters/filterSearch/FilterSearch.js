@@ -4,7 +4,7 @@ import style from './FilterSearch.module.css';
 
 function FilterSearch({ inputRef, value, handleChange }) {
   return (
-    <div style={{ width: '100%' }}>
+    <div className={style.filterSearch}>
       <span
         onClick={() => inputRef.current.focus()}
         className={style.searchIcon}

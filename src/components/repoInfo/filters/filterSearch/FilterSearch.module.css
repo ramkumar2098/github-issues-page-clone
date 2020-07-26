@@ -1,7 +1,12 @@
+.filterSearch {
+  width: 100%;
+  position: relative;
+}
+
 .searchIcon {
   position: absolute;
   top: 8px;
-  left: 96px;
+  left: 8px;
   cursor: text;
 }
 

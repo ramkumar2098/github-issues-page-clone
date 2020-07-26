@@ -13,6 +13,7 @@
 .repoHead > :nth-child(1) {
   padding: 16px 16px 0;
   line-height: 1.5;
+  margin-bottom: 16px;
 }
 
 .repoHead > :nth-child(2) {

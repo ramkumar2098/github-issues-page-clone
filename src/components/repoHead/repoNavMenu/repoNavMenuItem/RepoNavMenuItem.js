@@ -1,9 +1,11 @@
 import React from 'react';
 
-function RepoNavMenuItem({ repoNavMenuItem }) {
+function RepoNavMenuItem({ menuItemRef, repoNavMenuItem }) {
   return (
     <li>
-      <a href="#">{repoNavMenuItem}</a>
+      <a href="#" ref={menuItemRef}>
+        {repoNavMenuItem}
+      </a>
     </li>
   );
 }
