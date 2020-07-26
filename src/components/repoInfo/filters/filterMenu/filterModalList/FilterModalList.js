@@ -1,19 +1,17 @@
 import React from 'react';
-import FilterModalListItems from './filterModalListItems/FilterModalListItems';
-import ExternalLinkSVG from 'SVGs/ExternalLinkSVG';
+import { filterModalList } from 'data/filterModalList';
 import style from './FilterModalList.module.css';
 
 function FilterModalList() {
   return (
-    <ul className={style.modalList}>
-      <FilterModalListItems />
-      <li>
-        <a href="#">
-          <ExternalLinkSVG />
-          <span>View advanced search syntax</span>
+    <div className={style.modalList}>
+      {filterModalList.map(({ Icon, listItem }) => (
+        <a href="#" key={listItem}>
+          {Icon && <Icon />}
+          <span>{listItem}</span>
         </a>
-      </li>
-    </ul>
+      ))}
+    </div>
   );
 }
 

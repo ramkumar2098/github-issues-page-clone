@@ -3,18 +3,18 @@
   border-bottom: 1px solid #eaecef;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.modalHeader > span,
-.close {
+.modalHeader {
   padding: 16px;
 }
 
 .close {
   background: #fff;
   outline: 0;
+  padding: 0;
   border: 0;
+  border-top-right-radius: 12px;
   cursor: pointer;
 }
 
@@ -23,9 +23,12 @@
   fill: #24292e;
 }
 
+.close > svg {
+  vertical-align: middle;
+}
+
 @media (min-width: 544px) {
-  .modalHeader > span,
-  .close {
+  .modalHeader {
     padding: 7px 7px 7px 16px;
   }
 }
