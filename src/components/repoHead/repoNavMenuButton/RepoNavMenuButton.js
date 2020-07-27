@@ -7,7 +7,7 @@ function RepoNavMenuButton({
   navButtonRef,
   menuRef,
   displayRepoNavMenu,
-  toggleRepoNavMenu,
+  openRepoNavMenu,
 }) {
   return (
     <>
@@ -16,7 +16,7 @@ function RepoNavMenuButton({
         href="#"
         ref={navButtonRef}
         onClick={() => {
-          toggleRepoNavMenu();
+          openRepoNavMenu();
           menuRef.current.style.display === 'none'
             ? (menuRef.current.style.display = 'block')
             : (menuRef.current.style.display = 'none');

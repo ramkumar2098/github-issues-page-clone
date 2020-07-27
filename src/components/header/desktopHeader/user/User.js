@@ -1,35 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Overlay from 'components/overlay/Overlay';
 import Avatar from '../../avatar/Avatar';
-import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
+import DropdownCaret from 'components/dropdownCaret/DropdownCaret';
 import UserMenu from './userMenu/UserMenu';
 import style from './User.module.css';
 
 function User() {
   const [displayUserMenu, setDisplayUserMenu] = useState(false);
 
-  useEffect(() => {
-    ['click', 'keyup'].forEach(event => {
-      window.addEventListener(event, e => {
-        (!e.target.matches('.user, .user *') || e.keyCode === 27) &&
-          setDisplayUserMenu(false);
-      });
-    });
-  }, []);
-
   return (
     <>
       {displayUserMenu && <Overlay />}
-      <div className={style.user + ' user'}>
+      <div className={style.user}>
         <a
           href="#"
-          onClick={() => setDisplayUserMenu(!displayUserMenu)}
+          onClick={() => setDisplayUserMenu(true)}
           className={style.avatar}
         >
           <Avatar />
           <DropdownCaret />
         </a>
-        {displayUserMenu && <UserMenu />}
+        {displayUserMenu && (
+          <UserMenu closeUserMenu={() => setDisplayUserMenu(false)} />
+        )}
       </div>
     </>
   );

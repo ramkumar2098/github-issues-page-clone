@@ -4,30 +4,8 @@ import ToolbarItemName from './toolbarItemName/ToolbarItemName';
 import SelectMenu from './selectMenu/SelectMenu';
 import style from './ToolbarItem.module.css';
 
-function ToolbarItem({ toolbarItem: props }) {
-  const { classNames } = props;
-  const [toolbarItem, selectMenuModal] = classNames;
-
-  const classList = [
-    toolbarItem,
-    toolbarItem + ' *',
-    selectMenuModal,
-    selectMenuModal + ' *',
-  ];
-
+function ToolbarItem(props) {
   const [displayMenu, setDisplayMenu] = useState(false);
-  const closeMenu = () => setDisplayMenu(false);
-
-  useEffect(() => {
-    ['click', 'keyup'].forEach(event => {
-      window.addEventListener(event, e => {
-        (!e.target.matches(classList.map(className => `.${className}`)) ||
-          e.keyCode === 27) &&
-          closeMenu();
-      });
-    });
-  }, []);
-
   const toolbarItemRef = useRef();
 
   useEffect(() => {
@@ -39,27 +17,19 @@ function ToolbarItem({ toolbarItem: props }) {
   return (
     <>
       {displayMenu && <Overlay />}
-      <span style={{ padding: '0 16px' }}>
+      <div className={style.toolbarItem}>
         <a
           href="#"
           ref={toolbarItemRef}
-          onClick={e =>
-            !e.target.matches(`.${selectMenuModal}, .${selectMenuModal} *`) &&
-            setDisplayMenu(!displayMenu)
-          }
-          title={props.toolbarItem}
-          className={`${style.toolbarItem} ${toolbarItem}`}
+          onClick={() => setDisplayMenu(true)}
+          title={props.toolbarItem.toolbarItemName}
         >
           <ToolbarItemName {...props} />
-          {displayMenu && (
-            <SelectMenu
-              {...props}
-              className={selectMenuModal}
-              closeMenu={closeMenu}
-            />
-          )}
         </a>
-      </span>
+        {displayMenu && (
+          <SelectMenu {...props} closeMenu={() => setDisplayMenu(false)} />
+        )}
+      </div>
     </>
   );
 }

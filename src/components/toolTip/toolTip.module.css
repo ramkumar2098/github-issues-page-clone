@@ -1,0 +1,44 @@
+.toolTip {
+  position: relative;
+}
+
+.toolTip::before,
+.toolTip::after {
+  position: absolute;
+  right: 50%;
+  pointer-events: none;
+  display: none;
+}
+
+.toolTip::before {
+  content: '';
+  border: 6px solid transparent;
+  border-bottom-color: #1b1f23;
+  margin-right: -6px;
+  bottom: -7px;
+}
+
+.toolTip::after {
+  content: attr(content);
+  font-size: 11px;
+  background-color: #1b1f23;
+  color: #fff;
+  padding: 0.5em 0.75em;
+  margin-top: 6px;
+  margin-right: -16px;
+  border-radius: 6px;
+  white-space: pre;
+  z-index: 1;
+  top: 100%;
+}
+
+.toolTip:hover:before,
+.toolTip:hover:after,
+.toolTip:focus:before,
+.toolTip:focus:after {
+  display: block;
+}
+
+.toolTip > svg {
+  vertical-align: middle;
+}

@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import style from './SelectMenuFilter.module.css';
 
-function SelectMenuFilter({ value, setValue, placeholder }) {
+function SelectMenuFilter({ toolbarItem, value, setValue }) {
+  const { placeholder } = toolbarItem;
+
   const inputRef = useRef();
 
   useEffect(() => {

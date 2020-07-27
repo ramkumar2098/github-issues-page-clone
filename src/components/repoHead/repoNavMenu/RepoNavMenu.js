@@ -1,6 +1,6 @@
 import React from 'react';
 import RepoNavMenuItem from './repoNavMenuItem/RepoNavMenuItem';
-import { repoNavMenuItems } from 'data/repoNavMenuItems';
+import { repoNavItems } from 'data/repoNavItems';
 import style from './RepoNavMenu.module.css';
 
 function RepoNavMenu({ menuRef, menuItemsRef }) {
@@ -10,11 +10,11 @@ function RepoNavMenu({ menuRef, menuItemsRef }) {
       className={style.repoNavMenu + ' repoNavMenu'}
       style={{ display: 'none' }}
     >
-      {repoNavMenuItems.map((repoNavMenuItem, i) => (
+      {repoNavItems.map(({ repoNavItem }, i) => (
         <RepoNavMenuItem
-          key={repoNavMenuItem}
+          key={repoNavItem}
           menuItemRef={menuItem => (menuItemsRef.current[i] = menuItem)}
-          repoNavMenuItem={repoNavMenuItem}
+          repoNavItem={repoNavItem}
         />
       ))}
     </ul>

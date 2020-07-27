@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Overlay from 'components/overlay/Overlay';
-import DropdownCaret from '../../../../dropdownCaret/DropdownCaret';
+import DropdownCaret from 'components/dropdownCaret/DropdownCaret';
 import WatchMenu from './watchMenu/WatchMenu';
 import style from '../RepoAction.module.css';
 
@@ -8,18 +8,6 @@ function Watch({ repoAction }) {
   const { Icon, action } = repoAction;
 
   const [dislayWatchMenu, setDislayWatchMenu] = useState(false);
-
-  useEffect(() => {
-    ['click', 'keyup'].forEach(event => {
-      window.addEventListener(event, e => {
-        event === 'click'
-          ? !e.target.matches('.action, .action *, .watchMenu, .watchMenu *') &&
-            setDislayWatchMenu(false)
-          : e.keyCode === 27 && setDislayWatchMenu(false);
-      });
-    });
-  }, []);
-
   const actionBtnRef = useRef();
 
   useEffect(() => {
@@ -33,15 +21,17 @@ function Watch({ repoAction }) {
       {dislayWatchMenu && <Overlay />}
       <button
         ref={actionBtnRef}
-        onClick={() => setDislayWatchMenu(!dislayWatchMenu)}
+        onClick={() => setDislayWatchMenu(true)}
         onMouseDown={e => e.preventDefault()}
-        className={style.action + ' action'}
+        className={style.action}
       >
         <Icon />
         <span className={style.textContent}>{action}</span>
         <DropdownCaret color="#000" />
       </button>
-      {dislayWatchMenu && <WatchMenu />}
+      {dislayWatchMenu && (
+        <WatchMenu closeWatchMenu={() => setDislayWatchMenu(false)} />
+      )}
     </>
   );
 }

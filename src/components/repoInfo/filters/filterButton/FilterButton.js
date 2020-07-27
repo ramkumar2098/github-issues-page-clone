@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import Overlay from 'components/overlay/Overlay';
-import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
+import DropdownCaret from 'components/dropdownCaret/DropdownCaret';
 import style from './FilterButton.module.css';
 
-function FilterButton({ displayModal, toggleModal }) {
+function FilterButton({ displayModal, openModal }) {
   const filterBtnRef = useRef();
 
   useEffect(() => {
@@ -17,9 +17,9 @@ function FilterButton({ displayModal, toggleModal }) {
       {displayModal && <Overlay />}
       <button
         ref={filterBtnRef}
-        onClick={toggleModal}
+        onClick={openModal}
         onMouseDown={e => e.preventDefault()}
-        className={style.filterBtn + ' filterBtn'}
+        className={style.filterBtn}
       >
         <span>Filters</span>
         <DropdownCaret color="#444d56" />

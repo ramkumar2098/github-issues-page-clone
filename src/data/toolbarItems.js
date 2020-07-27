@@ -1,50 +1,32 @@
-import UsersMenuList from '../components/repoContent/issuesToolbar/toolbarItem/selectMenu/usersMenuList/UsersMenuList';
-import LabelMenuList from '../components/repoContent/issuesToolbar/toolbarItem/selectMenu/labelMenuList/LabelMenuList';
-import ProjectsMenuList from '../components/repoContent/issuesToolbar/toolbarItem/selectMenu/projectsMenuList/ProjectsMenuList';
-import MilestonesMenuList from '../components/repoContent/issuesToolbar/toolbarItem/selectMenu/milestonesMenuList/MilestonesMenuList';
-import SortMenuList from '../components/repoContent/issuesToolbar/toolbarItem/selectMenu/sortMenuList/SortMenuList';
-
 export const toolbarItems = [
   {
-    toolbarItem: 'Author',
-    classNames: ['author', 'authorMenuModal'],
+    toolbarItemName: 'Author',
     header: 'Filter by author',
     placeholder: 'users',
-    SelectMenuList: UsersMenuList,
   },
   {
-    toolbarItem: 'Label',
-    classNames: ['label', 'labelMenuModal'],
+    toolbarItemName: 'Label',
     header: 'Filter by label',
     placeholder: 'labels',
-    SelectMenuList: LabelMenuList,
   },
   {
-    toolbarItem: 'Projects',
-    classNames: ['projects', 'projectsMenuModal'],
+    toolbarItemName: 'Projects',
     header: 'Filter by project',
     placeholder: 'projects',
-    SelectMenuList: ProjectsMenuList,
   },
   {
-    toolbarItem: 'Milestones',
-    classNames: ['milestones', 'milestonesMenuModal'],
+    toolbarItemName: 'Milestones',
     header: 'Filter by milestone',
     placeholder: 'milestones',
-    SelectMenuList: MilestonesMenuList,
   },
   {
-    toolbarItem: 'Assignee',
-    classNames: ['assignee', 'assigneeMenuModal'],
+    toolbarItemName: 'Assignee',
     header: 'Filter by who’s assigned',
     placeholder: 'users',
-    SelectMenuList: UsersMenuList,
   },
   {
-    toolbarItem: 'Sort',
-    classNames: ['sort', 'sortMenuModal'],
+    toolbarItemName: 'Sort',
     header: 'Sort by',
     placeholder: 'users',
-    SelectMenuList: SortMenuList,
   },
 ];

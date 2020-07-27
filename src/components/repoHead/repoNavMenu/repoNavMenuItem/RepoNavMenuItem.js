@@ -1,10 +1,10 @@
 import React from 'react';
 
-function RepoNavMenuItem({ menuItemRef, repoNavMenuItem }) {
+function RepoNavMenuItem({ menuItemRef, repoNavItem }) {
   return (
     <li>
       <a href="#" ref={menuItemRef}>
-        {repoNavMenuItem}
+        {repoNavItem}
       </a>
     </li>
   );

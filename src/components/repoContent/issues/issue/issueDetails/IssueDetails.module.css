@@ -20,7 +20,6 @@
 .issueDetail a {
   text-decoration: none;
   color: #586069;
-  font-weight: 600;
   font-size: 12px;
   display: flex;
 }
@@ -30,7 +29,12 @@
   border-radius: 50%;
 }
 
+.issueDetail a:hover::after {
+  right: 16px;
+}
+
 .issueDetail a > span {
+  font-weight: 600;
   margin-left: 3px;
 }
 

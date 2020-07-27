@@ -3,6 +3,25 @@
   padding-left: 16px;
 }
 
+.issuesIcon > span::before {
+  border-right-color: #1b1f23;
+  border-bottom-color: #fff;
+  margin-top: -6px;
+  margin-right: 0;
+  top: 50%;
+  right: -7px;
+  bottom: 0;
+}
+
+.issuesIcon > span::after {
+  width: 73px;
+  transform: translateY(50%);
+  margin-left: 6px;
+  top: auto;
+  bottom: 50%;
+  left: 100%;
+}
+
 .issuesIcon path {
   fill: #28a745;
 }

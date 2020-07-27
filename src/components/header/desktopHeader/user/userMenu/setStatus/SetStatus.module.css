@@ -18,12 +18,13 @@
   fill: #0366d6 !important;
 }
 
-.setStatus > a:hover > span {
-  color: #0366d6;
+.setStatus path,
+.setStatus > a:focus path {
+  fill: #586069 !important;
 }
 
-.setStatus path {
-  fill: #586069;
+.setStatus > a:hover > span {
+  color: #0366d6;
 }
 
 .setStatus span {

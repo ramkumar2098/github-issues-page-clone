@@ -7,16 +7,12 @@
   justify-content: space-between;
 }
 
-.issuesToolbar > span:nth-of-type(3),
-.issuesToolbar > span:nth-of-type(4) {
+.issuesToolbar > div:nth-of-type(3),
+.issuesToolbar > div:nth-of-type(4) {
   display: none;
 }
 
 @media (min-width: 544px) {
-  .toolbarItem > span:nth-child(2) {
-    display: inline-block;
-  }
-
   .issuesToolbar {
     justify-content: flex-start;
     border: 1px solid #e1e4e8;
@@ -29,14 +25,14 @@
     padding-right: 0 !important;
   }
 
-  .issuesToolbar > :last-child > a > div {
+  .issuesToolbar > :last-child > div {
     right: 0;
   }
 }
 
 @media (min-width: 768px) {
-  .issuesToolbar > span:nth-of-type(3),
-  .issuesToolbar > span:nth-of-type(4) {
+  .issuesToolbar > div:nth-of-type(3),
+  .issuesToolbar > div:nth-of-type(4) {
     display: block;
   }
 }

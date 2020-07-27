@@ -87,23 +87,15 @@ function RepoHead() {
         <RepoActions />
       </div>
       <div>
-        <RepoNav
-          navItemsRef={navItemsRef}
-          navButtonRef={navButtonRef}
-          displayIcon={displayIcon}
-        />
+        <RepoNav navItemsRef={navItemsRef} displayIcon={displayIcon} />
         <RepoNavMenuButton
           navButtonRef={navButtonRef}
           menuRef={menuRef}
           displayRepoNavMenu={displayRepoNavMenu}
-          toggleRepoNavMenu={() => setDisplayRepoNavMenu(!displayRepoNavMenu)}
+          openRepoNavMenu={() => setDisplayRepoNavMenu(true)}
         />
       </div>
-      <RepoNavMenu
-        menuRef={menuRef}
-        menuItemsRef={menuItemsRef}
-        displayIcon={displayIcon}
-      />
+      <RepoNavMenu menuRef={menuRef} menuItemsRef={menuItemsRef} />
     </div>
   );
 }

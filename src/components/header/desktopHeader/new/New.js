@@ -1,35 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Overlay from 'components/overlay/Overlay';
 import PlusSVG from 'SVGs/PlusSVG';
-import DropdownCaret from '../../../dropdownCaret/DropdownCaret';
+import DropdownCaret from 'components/dropdownCaret/DropdownCaret';
 import NewMenu from './newMenu/NewMenu';
 import style from './New.module.css';
 
 function New() {
   const [displayNewMenu, setDisplayNewMenu] = useState(false);
 
-  useEffect(() => {
-    ['click', 'keyup'].forEach(event => {
-      window.addEventListener(event, e => {
-        (!e.target.matches('.new, .new *') || e.keyCode === 27) &&
-          setDisplayNewMenu(false);
-      });
-    });
-  }, []);
-
   return (
     <>
       {displayNewMenu && <Overlay />}
-      <div className={style.new + ' new'}>
+      <div className={style.new}>
         <a
           href="#"
-          onClick={() => setDisplayNewMenu(!displayNewMenu)}
+          onClick={() => setDisplayNewMenu(true)}
           className={style.plus}
         >
           <PlusSVG />
           <DropdownCaret />
         </a>
-        {displayNewMenu && <NewMenu />}
+        {displayNewMenu && (
+          <NewMenu closeNewMenu={() => setDisplayNewMenu(false)} />
+        )}
       </div>
     </>
   );
