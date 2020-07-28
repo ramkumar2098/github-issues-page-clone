@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useAttachEvents } from 'hooks/useAttachEvents';
 import SelectMenuHeader from './selectMenuHeader/SelectMenuHeader';
 import SelectMenuFilter from './selectMenuFilter/SelectMenuFilter';
 import style from './SelectMenu.module.css';
@@ -9,22 +10,7 @@ function SelectMenu(props) {
 
   const [value, setValue] = useState('');
 
-  useEffect(() => {
-    const handleEvent = e =>
-      (e.keyCode === 27 ||
-        (!e.keyCode &&
-          !e.target.matches('.selectMenuModal, .selectMenuModal *'))) &&
-      closeMenu();
-
-    ['click', 'keyup'].forEach(event => {
-      window.addEventListener(event, handleEvent);
-    });
-
-    return () =>
-      ['click', 'keyup'].forEach(event => {
-        window.removeEventListener(event, handleEvent);
-      });
-  }, []);
+  useAttachEvents('selectMenuModal', closeMenu);
 
   return (
     <div className={style.selectMenu}>

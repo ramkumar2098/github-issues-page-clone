@@ -1,4 +1,5 @@
 import React from 'react';
+import { contains } from 'utils/contains';
 import style from './DropdownItem.module.css';
 
 function DropdownItem({
@@ -11,8 +12,7 @@ function DropdownItem({
   const { Icon, badge } = dropdownItem;
 
   return (
-    ((badge === 'Jump to' &&
-      'facebook/react'.includes(searchQuery.trim().toLowerCase())) ||
+    ((badge === 'Jump to' && contains('facebook/react', searchQuery)) ||
       (badge !== 'Jump to' && searchQuery.trim())) && (
       <a
         href="#"

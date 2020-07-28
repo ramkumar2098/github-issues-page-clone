@@ -1,4 +1,4 @@
-.filterModal {
+.filterMenu {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.filterContent {
+.filterMenuModal {
   width: 100%;
   max-height: 66%;
   background-color: #fff;
@@ -23,7 +23,7 @@
 }
 
 @media (min-width: 544px) {
-  .filterModal {
+  .filterMenu {
     position: absolute;
     top: 40px;
     right: auto;
@@ -32,7 +32,7 @@
     padding: 0;
   }
 
-  .filterContent {
+  .filterMenuModal {
     width: 300px;
     font-size: 12px;
     border: 1px solid #e1e4e8;

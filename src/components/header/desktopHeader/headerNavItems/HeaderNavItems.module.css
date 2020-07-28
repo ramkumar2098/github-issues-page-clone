@@ -1,8 +1,15 @@
+.navBarItems {
+  height: 100%;
+  display: flex;
+}
+
 .navBarItems > a {
   color: #fff;
   font-weight: 600;
   text-decoration: none;
   margin-right: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .navBarItems > a:hover,

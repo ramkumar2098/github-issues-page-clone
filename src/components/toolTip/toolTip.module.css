@@ -32,10 +32,10 @@
   top: 100%;
 }
 
-.toolTip:hover:before,
-.toolTip:hover:after,
-.toolTip:focus:before,
-.toolTip:focus:after {
+.toolTip:hover::before,
+.toolTip:hover::after,
+.toolTip:focus::before,
+.toolTip:focus::after {
   display: block;
 }
 

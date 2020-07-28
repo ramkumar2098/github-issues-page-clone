@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { contains } from 'utils/contains';
 import MilestonesMenuItem from './milestonesMenuItem/MilestonesMenuItem';
 import { milestonesMenuItems } from 'data/milestonesMenuItems';
 import NotFound from '../notFound/NotFound';
@@ -11,15 +12,12 @@ function MilestonesMenuList({ value }) {
     i === milestonesMenuItems.length ? setNotFound(true) : setNotFound(false);
   });
 
-  const isValid = string =>
-    string.toLowerCase().includes(value.trim().toLowerCase());
-
   return (
     <div style={{ overflow: 'auto' }}>
       {milestonesMenuItems
         .filter(milestonesMenuItem => {
-          !isValid(milestonesMenuItem) && i++;
-          return isValid(milestonesMenuItem);
+          !contains(milestonesMenuItem, value) && i++;
+          return contains(milestonesMenuItem, value);
         })
         .map(milestonesMenuItem => (
           <MilestonesMenuItem

@@ -1,11 +1,9 @@
 .burgerMenuItems {
-  background-color: #24292e;
   padding: 0 1.2rem 1rem 1.2rem;
 }
 
 .burgerMenuItems > a {
   display: block;
-  background-color: #24292e;
   color: #fff;
   font-weight: 600;
   text-decoration: none;

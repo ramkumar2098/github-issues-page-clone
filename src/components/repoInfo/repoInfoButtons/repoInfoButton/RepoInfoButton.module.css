@@ -14,6 +14,17 @@
   background-color: #f6f8fa;
 }
 
+.labels {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.milestones {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: 0;
+}
+
 .count {
   background-color: #d1d5da80;
   font-size: 12px;

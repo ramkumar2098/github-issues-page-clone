@@ -12,3 +12,9 @@
 .header a:focus path {
   fill: #ffffffb3;
 }
+
+@media (min-width: 1012px) {
+  .header > div {
+    padding: 0 16px;
+  }
+}

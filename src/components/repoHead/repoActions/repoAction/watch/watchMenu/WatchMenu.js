@@ -1,24 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useAttachEvents } from 'hooks/useAttachEvents';
 import WatchMenuItem from './watchMenuItem/WatchMenuItem';
 import { watchMenuItems } from 'data/watchMenuItems';
 import style from './WatchMenu.module.css';
 
 function WatchMenu({ closeWatchMenu }) {
-  useEffect(() => {
-    const handleEvent = e =>
-      (e.keyCode === 27 ||
-        (!e.keyCode && !e.target.matches('.watchMenu, .watchMenu *'))) &&
-      closeWatchMenu();
-
-    ['click', 'keyup'].forEach(event => {
-      window.addEventListener(event, handleEvent);
-    });
-
-    return () =>
-      ['click', 'keyup'].forEach(event => {
-        window.removeEventListener(event, handleEvent);
-      });
-  }, []);
+  useAttachEvents('watchMenu', closeWatchMenu);
 
   return (
     <div className={style.watchMenu + ' watchMenu'}>

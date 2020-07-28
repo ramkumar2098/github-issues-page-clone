@@ -1,0 +1,9 @@
+.desktopHeader {
+  height: 50px;
+}
+
+.desktopHeader > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

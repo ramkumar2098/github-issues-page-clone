@@ -4,7 +4,7 @@ import BurgerMenuItems from './burgerMenuItems/BurgerMenuItems';
 
 function BurgerMenu(props) {
   return (
-    <div>
+    <div style={{ backgroundColor: '#24292e' }}>
       <SearchField {...props} styles={{ display: 'flex', width: '100%' }} />
       <BurgerMenuItems />
     </div>

@@ -3,7 +3,7 @@ import Overlay from 'components/overlay/Overlay';
 import DropdownCaret from 'components/dropdownCaret/DropdownCaret';
 import style from './FilterButton.module.css';
 
-function FilterButton({ displayModal, openModal }) {
+function FilterButton({ displayModal, openMenu }) {
   const filterBtnRef = useRef();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function FilterButton({ displayModal, openModal }) {
       {displayModal && <Overlay />}
       <button
         ref={filterBtnRef}
-        onClick={openModal}
+        onClick={openMenu}
         onMouseDown={e => e.preventDefault()}
         className={style.filterBtn}
       >

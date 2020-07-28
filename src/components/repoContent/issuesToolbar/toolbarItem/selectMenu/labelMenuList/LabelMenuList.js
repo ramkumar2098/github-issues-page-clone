@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { contains } from 'utils/contains';
 import LabelMenuItem from './labelMenuItem/LabelMenuItem';
 import { labelMenuItems } from 'data/labelMenuItems';
 import NotFound from '../notFound/NotFound';
@@ -12,16 +13,13 @@ function LabelMenuList({ value }) {
     i === labelMenuItems.length ? setNotFound(true) : setNotFound(false);
   });
 
-  const isValid = string =>
-    string.toLowerCase().includes(value.trim().toLowerCase());
-
   return (
     <>
       <div style={{ overflow: 'auto' }}>
         {labelMenuItems
           .filter(({ label }) => {
-            !isValid(label) && i++;
-            return isValid(label);
+            !contains(label, value) && i++;
+            return contains(label, value);
           })
           .map(labelMenuItem => (
             <LabelMenuItem

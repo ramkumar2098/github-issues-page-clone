@@ -2,11 +2,11 @@ import React from 'react';
 import CloseSVG from 'SVGs/CloseSVG';
 import style from './FilterModalHeader.module.css';
 
-function FilterModalHeader({ closeModal }) {
+function FilterModalHeader({ closeMenu }) {
   return (
     <div className={style.modalHeader}>
       <span>Filter Issues</span>
-      <button onClick={closeModal} className={style.close}>
+      <button onClick={closeMenu} className={style.close}>
         <CloseSVG />
       </button>
     </div>

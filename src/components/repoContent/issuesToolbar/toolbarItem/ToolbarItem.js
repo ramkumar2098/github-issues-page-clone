@@ -17,7 +17,7 @@ function ToolbarItem(props) {
   return (
     <>
       {displayMenu && <Overlay />}
-      <div className={style.toolbarItem}>
+      <span className={style.toolbarItem}>
         <a
           href="#"
           ref={toolbarItemRef}
@@ -29,7 +29,7 @@ function ToolbarItem(props) {
         {displayMenu && (
           <SelectMenu {...props} closeMenu={() => setDisplayMenu(false)} />
         )}
-      </div>
+      </span>
     </>
   );
 }

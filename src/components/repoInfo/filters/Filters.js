@@ -5,22 +5,17 @@ import FilterSearch from './filterSearch/FilterSearch';
 import style from './Filters.module.css';
 
 function Filters() {
-  const [displayModal, setDisplayModal] = useState(false);
+  const [displayMenu, setDisplayMenu] = useState(false);
   const [value, setValue] = useState('is:issue is:open ');
   const inputRef = useRef();
 
   return (
     <div className={style.filters}>
       <FilterButton
-        displayModal={displayModal}
-        openModal={() => setDisplayModal(true)}
+        displayMenu={displayMenu}
+        openMenu={() => setDisplayMenu(true)}
       />
-      {displayModal && (
-        <FilterMenu
-          displayModal={displayModal}
-          closeModal={() => setDisplayModal(false)}
-        />
-      )}
+      {displayMenu && <FilterMenu closeMenu={() => setDisplayMenu(false)} />}
       <FilterSearch
         value={value}
         inputRef={inputRef}

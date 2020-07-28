@@ -5,11 +5,7 @@ import HeaderNavItems from './headerNavItems/HeaderNavItems';
 import NotificationBell from '../notificationBell/NotificationBell';
 import New from './new/New';
 import User from './user/User';
-
-const desktopHead = {
-  display: 'flex',
-  alignItems: 'center',
-};
+import style from './DesktopHeader.module.css';
 
 const searchFieldStyles = {
   display: 'inline',
@@ -19,13 +15,13 @@ const searchFieldStyles = {
 
 function DesktopHeader(props) {
   return (
-    <div style={{ padding: '8px 16px' }}>
-      <span style={desktopHead}>
+    <div className={style.desktopHeader}>
+      <span>
         <GithubLogo />
         <SearchField {...props} styles={searchFieldStyles} />
         <HeaderNavItems />
       </span>
-      <span style={desktopHead}>
+      <span>
         <NotificationBell marginRight="16px" />
         <New />
         <User />

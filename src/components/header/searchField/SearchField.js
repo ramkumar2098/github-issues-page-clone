@@ -4,19 +4,12 @@ import SearchDropdown from './searchDropdown/SearchDropdown';
 import style from './SearchField.module.css';
 
 function SearchField({ styles, searchQuery, setSearchQuery }) {
-  const searchField = {
-    display: styles.display,
-  };
-
-  const input = {
-    width: styles.width,
-    marginBottom: styles.marginBottom,
-  };
+  const { display, width, marginBottom } = styles;
 
   const inputRef = useRef();
 
   return (
-    <span className={style.searchField} style={searchField}>
+    <span className={style.searchField} style={{ display }}>
       <input
         type="text"
         ref={inputRef}
@@ -24,7 +17,7 @@ function SearchField({ styles, searchQuery, setSearchQuery }) {
         onChange={e => setSearchQuery(e.target.value)}
         placeholder="Search or jump to..."
         className={style.input}
-        style={input}
+        style={{ width, marginBottom }}
       />
       <span onClick={() => inputRef.current.focus()} className={style.slash}>
         <SlashSVG />

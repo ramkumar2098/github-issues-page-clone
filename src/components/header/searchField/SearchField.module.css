@@ -1,6 +1,5 @@
 .searchField {
-  background-color: #24292e;
-  padding: 0 1.2rem;
+  margin: 0 1.2rem;
   justify-content: center;
   position: relative;
 }
@@ -45,7 +44,7 @@
 
 .slash {
   position: absolute;
-  right: 1.2rem;
+  right: 0.3rem;
   margin-top: 5px;
   margin-right: 8px;
 }
